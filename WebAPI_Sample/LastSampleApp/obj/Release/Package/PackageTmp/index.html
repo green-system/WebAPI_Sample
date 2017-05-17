@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bank App</title>
+</head>
+<body>
+
+<div>
+    <h2>All Banks</h2>
+    <input type="button" value="Search" onclick="findall();" />
+    <ol id="banks" style="padding-left:3em" />
+</div>
+<div>
+    <h2>Search by BANK_CD</h2>
+    <input type="text" id="bankCd" size="5" />
+    <input type="button" value="Search" onclick="find();" />
+    <ol id="bank" style="padding-left:3em" />
+</div>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+    var uri = 'api/heroes';
+
+    function findall() {
+      // Send an AJAX request
+      $.getJSON(uri)
+          .done(function (data) {
+            ulObj = $("#banks");
+            ulObj.text('全件');
+            ulObj.append($("<BR>").text("<BR>"));
+            ulObj.append($("<BR>").text("<BR>")),
+            // On success, 'data' contains a list of banks.
+            $.each(data, function (key, item) {
+                $('<li>', { text: formatItem(item) }).appendTo(ulObj);
+            });
+          });
+    }
+
+    function formatItem(item) {
+        return '支店CD:' + item.OFFICE_CD
+            + '   支店名:' + item.BANK_OR_OFFICE_NAME
+            + '   支店名（ｶﾅ）:' + item.BANK_OR_OFFICE_KANA;
+    }
+
+    function find() {
+        var id = $('#bankCd').val();
+      $.getJSON(uri + '?bankcd=' + id)
+          .done(function (data) {
+              ulObj = $("#bank");
+              if (data.length != 0) {
+                  ulObj.text('銀行名：' + data[0].BANK_OR_OFFICE_NAME);
+                  ulObj.append($("<BR>").text("<BR>"));
+                  ulObj.append($("<BR>").text("<BR>")),
+                  $.each(data, function (key, item) {
+                  ulObj.append($("<li>").text(formatItem(item)));
+              });
+              }
+              else
+              {
+                  ulObj.text('該当する銀行が存在しません。');
+              }
+              })
+    }
+    </script>
+</body>
+</html>

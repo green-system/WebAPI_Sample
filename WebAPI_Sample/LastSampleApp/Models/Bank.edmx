@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="JBADBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="GAMA_BANK">
+          <Key>
+            <PropertyRef Name="BANK_CD" />
+            <PropertyRef Name="OFFICE_CD" />
+            <PropertyRef Name="OFFICE_FLG" />
+          </Key>
+          <Property Name="BANK_CD" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="OFFICE_CD" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="OFFICE_FLG" Type="tinyint" Nullable="false" />
+          <Property Name="BANK_OR_OFFICE_NAME" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="BANK_OR_OFFICE_KANA" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="DELETE_FLG" Type="tinyint" Nullable="false" />
+          <Property Name="MANUAL_UPDATE" Type="datetime2" Precision="3" />
+          <Property Name="ADMIN_NUMBER" Type="tinyint" />
+          <Property Name="SYSTEM_UPDATE" Type="datetime2" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="JBADBModelStoreContainer">
+          <EntitySet Name="GAMA_BANK" EntityType="Self.GAMA_BANK" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="JBADBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="GAMA_BANK">
+          <Key>
+            <PropertyRef Name="BANK_CD" />
+            <PropertyRef Name="OFFICE_CD" />
+            <PropertyRef Name="OFFICE_FLG" />
+          </Key>
+          <Property Name="BANK_CD" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="OFFICE_CD" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="OFFICE_FLG" Type="Byte" Nullable="false" />
+          <Property Name="BANK_OR_OFFICE_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BANK_OR_OFFICE_KANA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DELETE_FLG" Type="Byte" Nullable="false" />
+          <Property Name="MANUAL_UPDATE" Type="DateTime" Precision="3" />
+          <Property Name="ADMIN_NUMBER" Type="Byte" />
+          <Property Name="SYSTEM_UPDATE" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="JBADBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="GAMA_BANK" EntityType="Self.GAMA_BANK" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="JBADBModelStoreContainer" CdmEntityContainer="JBADBEntities">
+          <EntitySetMapping Name="GAMA_BANK">
+            <EntityTypeMapping TypeName="JBADBModel.GAMA_BANK">
+              <MappingFragment StoreEntitySet="GAMA_BANK">
+                <ScalarProperty Name="BANK_CD" ColumnName="BANK_CD" />
+                <ScalarProperty Name="OFFICE_CD" ColumnName="OFFICE_CD" />
+                <ScalarProperty Name="OFFICE_FLG" ColumnName="OFFICE_FLG" />
+                <ScalarProperty Name="BANK_OR_OFFICE_NAME" ColumnName="BANK_OR_OFFICE_NAME" />
+                <ScalarProperty Name="BANK_OR_OFFICE_KANA" ColumnName="BANK_OR_OFFICE_KANA" />
+                <ScalarProperty Name="DELETE_FLG" ColumnName="DELETE_FLG" />
+                <ScalarProperty Name="MANUAL_UPDATE" ColumnName="MANUAL_UPDATE" />
+                <ScalarProperty Name="ADMIN_NUMBER" ColumnName="ADMIN_NUMBER" />
+                <ScalarProperty Name="SYSTEM_UPDATE" ColumnName="SYSTEM_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="なし" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

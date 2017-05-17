@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JBADBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="GAMA_BANK">
+    <Key>
+      <PropertyRef Name="BANK_CD" />
+      <PropertyRef Name="OFFICE_CD" />
+      <PropertyRef Name="OFFICE_FLG" />
+    </Key>
+    <Property Name="BANK_CD" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="OFFICE_CD" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="OFFICE_FLG" Type="tinyint" Nullable="false" />
+    <Property Name="BANK_OR_OFFICE_NAME" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="BANK_OR_OFFICE_KANA" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DELETE_FLG" Type="tinyint" Nullable="false" />
+    <Property Name="MANUAL_UPDATE" Type="datetime2" Precision="3" />
+    <Property Name="ADMIN_NUMBER" Type="tinyint" />
+    <Property Name="SYSTEM_UPDATE" Type="datetime2" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="JBADBModelStoreContainer">
+    <EntitySet Name="GAMA_BANK" EntityType="Self.GAMA_BANK" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

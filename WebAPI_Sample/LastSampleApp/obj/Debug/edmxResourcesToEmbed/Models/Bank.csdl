@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JBADBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="GAMA_BANK">
+    <Key>
+      <PropertyRef Name="BANK_CD" />
+      <PropertyRef Name="OFFICE_CD" />
+      <PropertyRef Name="OFFICE_FLG" />
+    </Key>
+    <Property Name="BANK_CD" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="OFFICE_CD" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="OFFICE_FLG" Type="Byte" Nullable="false" />
+    <Property Name="BANK_OR_OFFICE_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BANK_OR_OFFICE_KANA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DELETE_FLG" Type="Byte" Nullable="false" />
+    <Property Name="MANUAL_UPDATE" Type="DateTime" Precision="3" />
+    <Property Name="ADMIN_NUMBER" Type="Byte" />
+    <Property Name="SYSTEM_UPDATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="JBADBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="GAMA_BANK" EntityType="Self.GAMA_BANK" />
+  </EntityContainer>
+</Schema>

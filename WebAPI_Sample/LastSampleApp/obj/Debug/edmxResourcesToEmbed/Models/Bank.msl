@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JBADBModelStoreContainer" CdmEntityContainer="JBADBEntities">
+    <EntitySetMapping Name="GAMA_BANK">
+      <EntityTypeMapping TypeName="JBADBModel.GAMA_BANK">
+        <MappingFragment StoreEntitySet="GAMA_BANK">
+          <ScalarProperty Name="BANK_CD" ColumnName="BANK_CD" />
+          <ScalarProperty Name="OFFICE_CD" ColumnName="OFFICE_CD" />
+          <ScalarProperty Name="OFFICE_FLG" ColumnName="OFFICE_FLG" />
+          <ScalarProperty Name="BANK_OR_OFFICE_NAME" ColumnName="BANK_OR_OFFICE_NAME" />
+          <ScalarProperty Name="BANK_OR_OFFICE_KANA" ColumnName="BANK_OR_OFFICE_KANA" />
+          <ScalarProperty Name="DELETE_FLG" ColumnName="DELETE_FLG" />
+          <ScalarProperty Name="MANUAL_UPDATE" ColumnName="MANUAL_UPDATE" />
+          <ScalarProperty Name="ADMIN_NUMBER" ColumnName="ADMIN_NUMBER" />
+          <ScalarProperty Name="SYSTEM_UPDATE" ColumnName="SYSTEM_UPDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
