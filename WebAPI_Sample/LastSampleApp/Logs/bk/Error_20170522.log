@@ -1,0 +1,18 @@
+2017-05-22 17:33:33,780 [7] [ERROR] LastSampleApp.Controllers.HeroesController C:\Users\ES3408\Documents\GitHub\WebAPI_Sample\WebAPI_Sample\LastSampleApp\Controllers\HeroesController.cs(69) LastSampleApp.Controllers.HeroesController Get - error_code=401 許可されていない操作を実行しようとしました。
+2017-05-22 17:35:00,325 [7] [ERROR] LastSampleApp.Controllers.HeroesController C:\Users\ES3408\Documents\GitHub\WebAPI_Sample\WebAPI_Sample\LastSampleApp\Controllers\HeroesController.cs(69) LastSampleApp.Controllers.HeroesController Get - error_code=401 許可されていない操作を実行しようとしました。
+2017-05-22 17:36:02,133 [7] [ERROR] LastSampleApp.Controllers.HeroesController C:\Users\ES3408\Documents\GitHub\WebAPI_Sample\WebAPI_Sample\LastSampleApp\Controllers\HeroesController.cs(69) LastSampleApp.Controllers.HeroesController Get - error_code=401 許可されていない操作を実行しようとしました。
+2017-05-22 17:41:30,745 [7] [ERROR] LastSampleApp.Controllers.HeroesController C:\Users\ES3408\Documents\GitHub\WebAPI_Sample\WebAPI_Sample\LastSampleApp\Controllers\HeroesController.cs(81) LastSampleApp.Controllers.HeroesController Get - error_code=StatusCode: 401, ReasonPhrase: 'Unauthorized', Version: 1.1, Content: <null>, Headers:
+{
+} HTTP 要求の処理で例外が発生しました。詳細については、この例外の 'Response' プロパティによって返される HTTP 応答を参照してください。
+2017-05-22 17:41:56,490 [12] [ERROR] LastSampleApp.Controllers.HeroesController C:\Users\ES3408\Documents\GitHub\WebAPI_Sample\WebAPI_Sample\LastSampleApp\Controllers\HeroesController.cs(81) LastSampleApp.Controllers.HeroesController Get - error_code=StatusCode: 401, ReasonPhrase: 'Unauthorized', Version: 1.1, Content: <null>, Headers:
+{
+} HTTP 要求の処理で例外が発生しました。詳細については、この例外の 'Response' プロパティによって返される HTTP 応答を参照してください。
+2017-05-22 17:47:06,850 [7] [ERROR] LastSampleApp.Controllers.HeroesController C:\Users\ES3408\Documents\GitHub\WebAPI_Sample\WebAPI_Sample\LastSampleApp\Controllers\HeroesController.cs(79) LastSampleApp.Controllers.HeroesController Get - error_code=StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: <null>, Headers:
+{
+} HTTP 要求の処理で例外が発生しました。詳細については、この例外の 'Response' プロパティによって返される HTTP 応答を参照してください。
+2017-05-22 17:48:02,595 [7] [ERROR] LastSampleApp.Controllers.HeroesController C:\Users\ES3408\Documents\GitHub\WebAPI_Sample\WebAPI_Sample\LastSampleApp\Controllers\HeroesController.cs(79) LastSampleApp.Controllers.HeroesController Get - error_code=StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: <null>, Headers:
+{
+} HTTP 要求の処理で例外が発生しました。詳細については、この例外の 'Response' プロパティによって返される HTTP 応答を参照してください。
+2017-05-22 17:48:48,963 [7] [ERROR] LastSampleApp.Controllers.HeroesController C:\Users\ES3408\Documents\GitHub\WebAPI_Sample\WebAPI_Sample\LastSampleApp\Controllers\HeroesController.cs(79) LastSampleApp.Controllers.HeroesController Get - error_code=StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: <null>, Headers:
+{
+} HTTP 要求の処理で例外が発生しました。詳細については、この例外の 'Response' プロパティによって返される HTTP 応答を参照してください。
