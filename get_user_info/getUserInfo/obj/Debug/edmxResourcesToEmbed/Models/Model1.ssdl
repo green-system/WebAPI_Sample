@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JINJIModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BU_INFORMATION">
+    <Key>
+      <PropertyRef Name="BU_CODE" />
+    </Key>
+    <Property Name="BU_CODE" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="START_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+    <Property Name="END_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+    <Property Name="BU_NAME_1" Type="varchar" MaxLength="30" />
+    <Property Name="BU_NAME_2" Type="varchar" MaxLength="30" />
+    <Property Name="BU_NAME_3" Type="varchar" MaxLength="100" />
+    <Property Name="BU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+    <Property Name="BU_ALTERATION_MARK" Type="varchar" MaxLength="2" />
+    <Property Name="SECTION_CODE" Type="varchar" MaxLength="2" />
+    <Property Name="BU_LOCATION_CODE" Type="varchar" MaxLength="3" />
+    <Property Name="BU_NUMBER" Type="varchar" MaxLength="3" />
+    <Property Name="EXECUTIVE_NUMBER" Type="varchar" MaxLength="2" />
+    <Property Name="SHITSU_PERSON_SECTION" Type="varchar" MaxLength="2" />
+    <Property Name="ADJUST_SECTION_NUMBER_A" Type="varchar" MaxLength="2" />
+    <Property Name="ADJUST_SECTION_NUMBER_B" Type="varchar" MaxLength="2" />
+    <Property Name="ADJUST_SECTION_NUMBER_C" Type="varchar" MaxLength="2" />
+    <Property Name="ADJUST_SECTION_NUMBER_D" Type="varchar" MaxLength="2" />
+    <Property Name="ASSESSMENT_CODE" Type="varchar" MaxLength="2" />
+    <Property Name="RANK_RISE_CODE" Type="varchar" MaxLength="2" />
+    <Property Name="CHANGE_CODE" Type="varchar" MaxLength="2" />
+    <Property Name="TRAINING_CODE" Type="varchar" MaxLength="2" />
+    <Property Name="EMPLOY_OFFICE_CODE" Type="varchar" MaxLength="3" />
+    <Property Name="NEW_BELONGING_LIMIT_FLAG" Type="varchar" MaxLength="1" />
+    <Property Name="PERSONNEL_EXCEPTION" Type="varchar" MaxLength="2" />
+    <Property Name="PERSONNEL_COMPULSION" Type="varchar" MaxLength="2" />
+    <Property Name="ENGLISH_NAME" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityContainer Name="JINJIModel1StoreContainer">
+    <EntitySet Name="BU_INFORMATION" EntityType="Self.BU_INFORMATION" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JINJI_MAINTEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="REPLY_PERMISSION">
+    <Key>
+      <PropertyRef Name="SYSTEM_CODE" />
+      <PropertyRef Name="RETURN_ITEM_CODE" />
+    </Key>
+    <Property Name="SYSTEM_CODE" Type="tinyint" Nullable="false" />
+    <Property Name="RETURN_ITEM_CODE" Type="tinyint" Nullable="false" />
+    <Property Name="DELETE_FLAG" Type="bit" Nullable="false" />
+    <Property Name="DELETE_HOST_NAME" Type="varchar" MaxLength="30" />
+    <Property Name="DELETE_DATE_TIME" Type="datetime2" Precision="3" />
+  </EntityType>
+  <EntityType Name="RETURN_ITEM">
+    <Key>
+      <PropertyRef Name="RETURN_ITEM_CODE" />
+    </Key>
+    <Property Name="RETURN_ITEM_CODE" Type="tinyint" Nullable="false" />
+    <Property Name="RETURN_TABLE_NAME" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="RETURN_ITEM_NAME" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="DELETE_FLAG" Type="bit" Nullable="false" />
+    <Property Name="DELETE_HOST_NAME" Type="varchar" MaxLength="30" />
+    <Property Name="DELETE_DATE_TIME" Type="datetime2" Precision="3" />
+  </EntityType>
+  <EntityType Name="SYSTEM_INFORMATION">
+    <Key>
+      <PropertyRef Name="SYSTEM_CODE" />
+    </Key>
+    <Property Name="SYSTEM_CODE" Type="tinyint" Nullable="false" />
+    <Property Name="SYSTEM_NAME" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="USER_AGENT" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="DELETE_FLAG" Type="bit" Nullable="false" />
+    <Property Name="DELETE_HOST_NAME" Type="varchar" MaxLength="30" />
+    <Property Name="DELETE_DATE_TIME" Type="datetime2" Precision="3" />
+  </EntityType>
+  <Association Name="FK_REPLY_PERMISSION_RETURN_ITEM">
+    <End Role="RETURN_ITEM" Type="Self.RETURN_ITEM" Multiplicity="1" />
+    <End Role="REPLY_PERMISSION" Type="Self.REPLY_PERMISSION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RETURN_ITEM">
+        <PropertyRef Name="RETURN_ITEM_CODE" />
+      </Principal>
+      <Dependent Role="REPLY_PERMISSION">
+        <PropertyRef Name="RETURN_ITEM_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REPLY_PERMISSION_SYSTEM_INFORMATION">
+    <End Role="SYSTEM_INFORMATION" Type="Self.SYSTEM_INFORMATION" Multiplicity="1" />
+    <End Role="REPLY_PERMISSION" Type="Self.REPLY_PERMISSION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SYSTEM_INFORMATION">
+        <PropertyRef Name="SYSTEM_CODE" />
+      </Principal>
+      <Dependent Role="REPLY_PERMISSION">
+        <PropertyRef Name="SYSTEM_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="JINJI_MAINTEModelStoreContainer">
+    <EntitySet Name="REPLY_PERMISSION" EntityType="Self.REPLY_PERMISSION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RETURN_ITEM" EntityType="Self.RETURN_ITEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SYSTEM_INFORMATION" EntityType="Self.SYSTEM_INFORMATION" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_REPLY_PERMISSION_RETURN_ITEM" Association="Self.FK_REPLY_PERMISSION_RETURN_ITEM">
+      <End Role="RETURN_ITEM" EntitySet="RETURN_ITEM" />
+      <End Role="REPLY_PERMISSION" EntitySet="REPLY_PERMISSION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REPLY_PERMISSION_SYSTEM_INFORMATION" Association="Self.FK_REPLY_PERMISSION_SYSTEM_INFORMATION">
+      <End Role="SYSTEM_INFORMATION" EntitySet="SYSTEM_INFORMATION" />
+      <End Role="REPLY_PERMISSION" EntitySet="REPLY_PERMISSION" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

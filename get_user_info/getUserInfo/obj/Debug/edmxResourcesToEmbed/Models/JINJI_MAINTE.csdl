@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JINJI_MAINTEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="JINJI_MAINTEEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="REPLY_PERMISSION" EntityType="JINJI_MAINTEModel.REPLY_PERMISSION" />
+    <EntitySet Name="RETURN_ITEM" EntityType="JINJI_MAINTEModel.RETURN_ITEM" />
+    <EntitySet Name="SYSTEM_INFORMATION" EntityType="JINJI_MAINTEModel.SYSTEM_INFORMATION" />
+    <AssociationSet Name="FK_REPLY_PERMISSION_RETURN_ITEM" Association="JINJI_MAINTEModel.FK_REPLY_PERMISSION_RETURN_ITEM">
+      <End Role="RETURN_ITEM" EntitySet="RETURN_ITEM" />
+      <End Role="REPLY_PERMISSION" EntitySet="REPLY_PERMISSION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REPLY_PERMISSION_SYSTEM_INFORMATION" Association="JINJI_MAINTEModel.FK_REPLY_PERMISSION_SYSTEM_INFORMATION">
+      <End Role="SYSTEM_INFORMATION" EntitySet="SYSTEM_INFORMATION" />
+      <End Role="REPLY_PERMISSION" EntitySet="REPLY_PERMISSION" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="REPLY_PERMISSION">
+    <Key>
+      <PropertyRef Name="SYSTEM_CODE" />
+      <PropertyRef Name="RETURN_ITEM_CODE" />
+    </Key>
+    <Property Name="SYSTEM_CODE" Type="Byte" Nullable="false" />
+    <Property Name="RETURN_ITEM_CODE" Type="Byte" Nullable="false" />
+    <Property Name="DELETE_FLAG" Type="Boolean" Nullable="false" />
+    <Property Name="DELETE_HOST_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DELETE_DATE_TIME" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="RETURN_ITEM" Relationship="JINJI_MAINTEModel.FK_REPLY_PERMISSION_RETURN_ITEM" FromRole="REPLY_PERMISSION" ToRole="RETURN_ITEM" />
+    <NavigationProperty Name="SYSTEM_INFORMATION" Relationship="JINJI_MAINTEModel.FK_REPLY_PERMISSION_SYSTEM_INFORMATION" FromRole="REPLY_PERMISSION" ToRole="SYSTEM_INFORMATION" />
+  </EntityType>
+  <EntityType Name="RETURN_ITEM">
+    <Key>
+      <PropertyRef Name="RETURN_ITEM_CODE" />
+    </Key>
+    <Property Name="RETURN_ITEM_CODE" Type="Byte" Nullable="false" />
+    <Property Name="RETURN_TABLE_NAME" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="RETURN_ITEM_NAME" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DELETE_FLAG" Type="Boolean" Nullable="false" />
+    <Property Name="DELETE_HOST_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DELETE_DATE_TIME" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="REPLY_PERMISSION" Relationship="JINJI_MAINTEModel.FK_REPLY_PERMISSION_RETURN_ITEM" FromRole="RETURN_ITEM" ToRole="REPLY_PERMISSION" />
+  </EntityType>
+  <EntityType Name="SYSTEM_INFORMATION">
+    <Key>
+      <PropertyRef Name="SYSTEM_CODE" />
+    </Key>
+    <Property Name="SYSTEM_CODE" Type="Byte" Nullable="false" />
+    <Property Name="SYSTEM_NAME" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="USER_AGENT" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DELETE_FLAG" Type="Boolean" Nullable="false" />
+    <Property Name="DELETE_HOST_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DELETE_DATE_TIME" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="REPLY_PERMISSION" Relationship="JINJI_MAINTEModel.FK_REPLY_PERMISSION_SYSTEM_INFORMATION" FromRole="SYSTEM_INFORMATION" ToRole="REPLY_PERMISSION" />
+  </EntityType>
+  <Association Name="FK_REPLY_PERMISSION_RETURN_ITEM">
+    <End Type="JINJI_MAINTEModel.RETURN_ITEM" Role="RETURN_ITEM" Multiplicity="1" />
+    <End Type="JINJI_MAINTEModel.REPLY_PERMISSION" Role="REPLY_PERMISSION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RETURN_ITEM">
+        <PropertyRef Name="RETURN_ITEM_CODE" />
+      </Principal>
+      <Dependent Role="REPLY_PERMISSION">
+        <PropertyRef Name="RETURN_ITEM_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REPLY_PERMISSION_SYSTEM_INFORMATION">
+    <End Type="JINJI_MAINTEModel.SYSTEM_INFORMATION" Role="SYSTEM_INFORMATION" Multiplicity="1" />
+    <End Type="JINJI_MAINTEModel.REPLY_PERMISSION" Role="REPLY_PERMISSION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SYSTEM_INFORMATION">
+        <PropertyRef Name="SYSTEM_CODE" />
+      </Principal>
+      <Dependent Role="REPLY_PERMISSION">
+        <PropertyRef Name="SYSTEM_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

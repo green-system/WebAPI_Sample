@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+このファイルは、Web プロジェクトの発行/パッケージ処理で使用されます。この MSBuild ファイルを編集することによって、
+この処理の動作をカスタマイズできます。詳細については、http://go.microsoft.com/fwlink/?LinkID=208121 を参照してください。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Work\人事情報DB\WebAPI仕様書\get_user_info\getUserInfo\out</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>08/10/2017 09:47:15</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>08/10/2017 09:47:15</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>11/03/2015 17:43:42</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>11/03/2015 17:43:42</publishTime>
+    </File>
+    <File Include="bin/getUserInfo.dll">
+      <publishTime>09/15/2017 16:56:02</publishTime>
+    </File>
+    <File Include="bin/ja/EntityFramework.resources.dll">
+      <publishTime>03/02/2015 09:32:36</publishTime>
+    </File>
+    <File Include="bin/ja/EntityFramework.SqlServer.resources.dll">
+      <publishTime>03/02/2015 09:32:36</publishTime>
+    </File>
+    <File Include="bin/ja/System.Net.Http.Formatting.resources.dll">
+      <publishTime>01/28/2015 04:02:48</publishTime>
+    </File>
+    <File Include="bin/ja/System.Web.Http.resources.dll">
+      <publishTime>01/28/2015 04:03:00</publishTime>
+    </File>
+    <File Include="bin/ja/System.Web.Http.WebHost.resources.dll">
+      <publishTime>01/28/2015 04:03:52</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>11/30/2016 16:07:42</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/03/2014 20:33:56</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>01/28/2015 04:02:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>01/28/2015 04:02:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>01/28/2015 04:03:46</publishTime>
+    </File>
+    <File Include="bin/Web.config">
+      <publishTime>09/15/2017 16:56:03</publishTime>
+    </File>
+    <File Include="bin/Web.Debug.config">
+      <publishTime>08/10/2017 09:46:56</publishTime>
+    </File>
+    <File Include="bin/Web.Release.config">
+      <publishTime>08/10/2017 09:46:56</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>08/10/2017 09:46:58</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>09/15/2017 16:55:55</publishTime>
+    </File>
+    <File Include="Models/JINJI.edmx.diagram">
+      <publishTime>09/11/2017 18:22:21</publishTime>
+    </File>
+    <File Include="Models/JINJI_MAINTE.edmx.diagram">
+      <publishTime>09/11/2017 13:56:17</publishTime>
+    </File>
+    <File Include="Models/Model1.edmx.diagram">
+      <publishTime>08/23/2017 18:03:41</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>08/29/2017 09:34:04</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/15/2017 16:56:03</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

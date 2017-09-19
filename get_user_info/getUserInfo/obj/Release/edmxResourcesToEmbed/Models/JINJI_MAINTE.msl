@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JINJI_MAINTEModelStoreContainer" CdmEntityContainer="JINJI_MAINTEEntities2">
+    <EntitySetMapping Name="REPLY_PERMISSION">
+      <EntityTypeMapping TypeName="JINJI_MAINTEModel.REPLY_PERMISSION">
+        <MappingFragment StoreEntitySet="REPLY_PERMISSION">
+          <ScalarProperty Name="DELETE_DATE_TIME" ColumnName="DELETE_DATE_TIME" />
+          <ScalarProperty Name="DELETE_HOST_NAME" ColumnName="DELETE_HOST_NAME" />
+          <ScalarProperty Name="DELETE_FLAG" ColumnName="DELETE_FLAG" />
+          <ScalarProperty Name="RETURN_ITEM_CODE" ColumnName="RETURN_ITEM_CODE" />
+          <ScalarProperty Name="SYSTEM_CODE" ColumnName="SYSTEM_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RETURN_ITEM">
+      <EntityTypeMapping TypeName="JINJI_MAINTEModel.RETURN_ITEM">
+        <MappingFragment StoreEntitySet="RETURN_ITEM">
+          <ScalarProperty Name="DELETE_DATE_TIME" ColumnName="DELETE_DATE_TIME" />
+          <ScalarProperty Name="DELETE_HOST_NAME" ColumnName="DELETE_HOST_NAME" />
+          <ScalarProperty Name="DELETE_FLAG" ColumnName="DELETE_FLAG" />
+          <ScalarProperty Name="RETURN_ITEM_NAME" ColumnName="RETURN_ITEM_NAME" />
+          <ScalarProperty Name="RETURN_TABLE_NAME" ColumnName="RETURN_TABLE_NAME" />
+          <ScalarProperty Name="RETURN_ITEM_CODE" ColumnName="RETURN_ITEM_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SYSTEM_INFORMATION">
+      <EntityTypeMapping TypeName="JINJI_MAINTEModel.SYSTEM_INFORMATION">
+        <MappingFragment StoreEntitySet="SYSTEM_INFORMATION">
+          <ScalarProperty Name="DELETE_DATE_TIME" ColumnName="DELETE_DATE_TIME" />
+          <ScalarProperty Name="DELETE_HOST_NAME" ColumnName="DELETE_HOST_NAME" />
+          <ScalarProperty Name="DELETE_FLAG" ColumnName="DELETE_FLAG" />
+          <ScalarProperty Name="USER_AGENT" ColumnName="USER_AGENT" />
+          <ScalarProperty Name="SYSTEM_NAME" ColumnName="SYSTEM_NAME" />
+          <ScalarProperty Name="SYSTEM_CODE" ColumnName="SYSTEM_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

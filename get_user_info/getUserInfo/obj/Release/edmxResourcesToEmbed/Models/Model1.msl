@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JINJIModel1StoreContainer" CdmEntityContainer="JINJIEntities2">
+    <EntitySetMapping Name="BU_INFORMATION">
+      <EntityTypeMapping TypeName="JINJIModel1.BU_INFORMATION">
+        <MappingFragment StoreEntitySet="BU_INFORMATION">
+          <ScalarProperty Name="BU_CODE" ColumnName="BU_CODE" />
+          <ScalarProperty Name="START_VALIDITY_DATE" ColumnName="START_VALIDITY_DATE" />
+          <ScalarProperty Name="END_VALIDITY_DATE" ColumnName="END_VALIDITY_DATE" />
+          <ScalarProperty Name="BU_NAME_1" ColumnName="BU_NAME_1" />
+          <ScalarProperty Name="BU_NAME_2" ColumnName="BU_NAME_2" />
+          <ScalarProperty Name="BU_NAME_3" ColumnName="BU_NAME_3" />
+          <ScalarProperty Name="BU_INFORMAL_NAME" ColumnName="BU_INFORMAL_NAME" />
+          <ScalarProperty Name="BU_ALTERATION_MARK" ColumnName="BU_ALTERATION_MARK" />
+          <ScalarProperty Name="SECTION_CODE" ColumnName="SECTION_CODE" />
+          <ScalarProperty Name="BU_LOCATION_CODE" ColumnName="BU_LOCATION_CODE" />
+          <ScalarProperty Name="BU_NUMBER" ColumnName="BU_NUMBER" />
+          <ScalarProperty Name="EXECUTIVE_NUMBER" ColumnName="EXECUTIVE_NUMBER" />
+          <ScalarProperty Name="SHITSU_PERSON_SECTION" ColumnName="SHITSU_PERSON_SECTION" />
+          <ScalarProperty Name="ADJUST_SECTION_NUMBER_A" ColumnName="ADJUST_SECTION_NUMBER_A" />
+          <ScalarProperty Name="ADJUST_SECTION_NUMBER_B" ColumnName="ADJUST_SECTION_NUMBER_B" />
+          <ScalarProperty Name="ADJUST_SECTION_NUMBER_C" ColumnName="ADJUST_SECTION_NUMBER_C" />
+          <ScalarProperty Name="ADJUST_SECTION_NUMBER_D" ColumnName="ADJUST_SECTION_NUMBER_D" />
+          <ScalarProperty Name="ASSESSMENT_CODE" ColumnName="ASSESSMENT_CODE" />
+          <ScalarProperty Name="RANK_RISE_CODE" ColumnName="RANK_RISE_CODE" />
+          <ScalarProperty Name="CHANGE_CODE" ColumnName="CHANGE_CODE" />
+          <ScalarProperty Name="TRAINING_CODE" ColumnName="TRAINING_CODE" />
+          <ScalarProperty Name="EMPLOY_OFFICE_CODE" ColumnName="EMPLOY_OFFICE_CODE" />
+          <ScalarProperty Name="NEW_BELONGING_LIMIT_FLAG" ColumnName="NEW_BELONGING_LIMIT_FLAG" />
+          <ScalarProperty Name="PERSONNEL_EXCEPTION" ColumnName="PERSONNEL_EXCEPTION" />
+          <ScalarProperty Name="PERSONNEL_COMPULSION" ColumnName="PERSONNEL_COMPULSION" />
+          <ScalarProperty Name="ENGLISH_NAME" ColumnName="ENGLISH_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JINJIModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BU_INFORMATION">
+    <Key>
+      <PropertyRef Name="BU_CODE" />
+    </Key>
+    <Property Name="BU_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="START_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="END_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="BU_NAME_1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="BU_NAME_2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="BU_NAME_3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="BU_ALTERATION_MARK" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="SECTION_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="BU_LOCATION_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="BU_NUMBER" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EXECUTIVE_NUMBER" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="SHITSU_PERSON_SECTION" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="ADJUST_SECTION_NUMBER_A" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="ADJUST_SECTION_NUMBER_B" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="ADJUST_SECTION_NUMBER_C" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="ADJUST_SECTION_NUMBER_D" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="ASSESSMENT_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="RANK_RISE_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="CHANGE_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="TRAINING_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="EMPLOY_OFFICE_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="NEW_BELONGING_LIMIT_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PERSONNEL_EXCEPTION" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="PERSONNEL_COMPULSION" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="ENGLISH_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="JINJIEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BU_INFORMATION" EntityType="Self.BU_INFORMATION" />
+  </EntityContainer>
+</Schema>

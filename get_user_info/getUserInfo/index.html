@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>従業員検索</title>
+</head>
+<body onKeyPress="go(window.event.keyCode)">
+
+    <div>
+        <h2>従業員名コードによる検索</h2>
+        <select id="user_agent">
+            <option value="rcpn_mtngrm_rsv_sys">受付・会議室予約システム</option>
+            <option value="ldng_equpmnt_rsv_sys">貸出備品予約システム</option>
+            <option value="e_app_sys_ver2">電子申請システムver.2</option>
+            <option value="gst_fcty_rsv_inq_sys">ゲスト施設予約・照会システム</option>
+            <option value="mainte_mngmnt_sys">保全管理システム</option>
+            <option value="imp_sugn_brd">改善提案ボード</option>
+            <option value="sts_mtrng_sys">在館状況把握システム</option>
+            <option value="mtngrm_usg_sum_mac">会議室利用状況集計マクロ</option>
+            <option value="crd_rdr_rdng_info_anlys_sys">ｶｰﾄﾞﾘｰﾀﾞ読取情報分析ｼｽﾃﾑ</option>
+            <option value="info_asst_mngmnt_sys">情報資産管理システム</option>
+            <option value="team_online">TEAM-Online</option>
+            <option value="jrnlst_mngmnt_sys">ジャーナリスト管理システム</option>
+            <option value="comp_contr_mail_sys">社貢献メーリングシステム</option>
+            <option value="dist_gid_sales_data_sys">ﾃﾞｨｽﾄｶﾞｲﾄﾞ･販売ﾃﾞｰﾀｼｽﾃﾑ</option>
+            <option value="svy_dep_hp_acc_log_db">調査部HPアクセスログDB</option>
+            <option value="book_key">書籍Key</option>
+        </select>
+        <input type="text" id="staffCd" size="7" />
+        <input type="button" value="検索" onclick="find();" />　　
+        <input type="checkbox" id="outsider" />社外者
+        <ol id="staff" style="padding-left:3em" />
+    </div>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+    const changeUserAgent = (ua) => {
+        // Chrome, fx, IE11
+        window.navigator.__defineGetter__('userAgent', () => ua);
+
+        // Safari
+        try {
+            // fxでsetterがないとエラーになるので
+            window.navigator = {
+                get userAgent() {
+                    return ua;
+                }
+            };
+        } catch (e) { }
+    };
+
+    function formatUser(user, out_flg) {
+        if (out_flg == false) {
+            return '最新所属コード：' + (("　　　") + user.BELONGING_LATEST_CODE).substr(-4)
+                + '　　　最新所属開始日：' + user.BELONGING_LATEST_START_DATE.substr(0, 4) + "/"
+                + user.BELONGING_LATEST_START_DATE.substr(4, 2) + "/"
+                + user.BELONGING_LATEST_START_DATE.substr(6, 2)
+                + '　　　部名称：' + (("　　　") + user.BBL_BU_NAME_1)
+                + '　　　室課名称：' + (("　　　") + user.SBL_SHITSU_NAME)
+                + '　　　係Ｇ名称：' + (("　　　") + user.KBL_KAKARI_NAME)
+                + '　　　本来所属コード：' + (("　　　") + user.ORIGINAL_BELONGING_CODE).substr(-4)
+                + '　　　本来所属開始日：' + user.ORIGINAL_BELONGING_START_DATE.substr(0, 4) + "/"
+                + user.ORIGINAL_BELONGING_START_DATE.substr(4, 2) + "/"
+                + user.ORIGINAL_BELONGING_START_DATE.substr(6, 2)
+                + '　　　部名称：' + (("　　　") + user.BOB_BU_NAME_1)
+                + '　　　室課名称：' + (("　　　") + user.SOB_SHITSU_NAME)
+                + '　　　係Ｇ名称：' + (("　　　") + user.KOB_KAKARI_NAME)
+            ;
+        } else {
+            return '受入部署コード：' + (("　　　") + user.ACCEPTANCE_BELONGING_CODE).substr(-4)
+                + '　　　契約期間カラ：' + user.START_CONTRACT_TERM.substr(0, 4) + "/"
+                + user.START_CONTRACT_TERM.substr(4, 2) + "/"
+                + user.START_CONTRACT_TERM.substr(6, 2)
+                + '　　　部名称：' + (("　　　") + user.BAB_BU_NAME_1)
+                + '　　　室課名称：' + (("　　　") + user.SAB_SHITSU_NAME)
+                + '　　　係Ｇ名称：' + (("　　　") + user.KAB_KAKARI_NAME)
+                + '　　　最新所属コード：' + (("　　　") + user.BELONGING_LATEST_CODE).substr(-4)
+                + '　　　部名称：' + (("　　　") + user.BBL_BU_NAME_1)
+                + '　　　室課名称：' + (("　　　") + user.SBL_SHITSU_NAME)
+                + '　　　係Ｇ名称：' + (("　　　") + user.KBL_KAKARI_NAME)
+            ;
+        }
+    }
+
+    function find() {
+      var txtUserAgent = document.getElementById("user_agent").value;
+
+      var uri = 'v1/jinji';
+      // ［検索］ボタンクリックで従業員検索を実行
+      var id = $('#staffCd').val();
+      var out_flg = $('#outsider').is(':checked');
+      if (out_flg == false) {
+          uri = uri + '/empinfo?uid=' + id;
+      } else {
+          uri = uri + '/bpinfo?uid=' + id;
+      }
+      $.getJSON(uri)
+          // 結果を取得したら…
+          .done(function (data) {
+              // 中身が空でなければ、その値を［従業員］欄に反映
+              ulObj = $("#staff");
+              if (data.length != 0) {
+                  ulObj.text('従業員コード：' + data[0].STAFF_CODE 
+                     + '　　　従業員名：' + data[0].KANJI_NAME);
+                ulObj.append($("<BR>").text("<BR>"));
+                ulObj.append($("<BR>").text("<BR>")),
+                $.each(data, function (key, user) {
+                    ulObj.append($("<li>").text(formatUser(user, out_flg)));
+              });
+              }
+              else
+              // 中身が空の場合は、エラーメッセージを反映
+              {
+                 ulObj.text('該当する従業員が存在しません。');
+              }
+          })
+    }
+    
+    function go(key) {
+        //EnterキーならSubmit
+        if (key == 13) find();
+    }
+    </script>
+</body>
+</html>

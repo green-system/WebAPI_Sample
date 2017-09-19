@@ -1,0 +1,1195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="JINJIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--生成中に見つかったエラー:
+警告 6002: テーブル/ビュー 'JINJI.dbo.V_PERSON_OF_COMPANY' には主キーが定義されていません。主キーは推論され、定義は読み取り専用のテーブル/ビューとして作成されました。-->
+        <EntityType Name="V_PERSON_OF_COMPANY">
+          <Key>
+            <PropertyRef Name="STAFF_CODE" />
+            <PropertyRef Name="ORIGINAL_BELONGING_START_DATE" />
+            <PropertyRef Name="ORIGINAL_BELONGING_CODE" />
+          </Key>
+          <Property Name="STAFF_CODE" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="KANJI_NAME" Type="varchar" MaxLength="20" />
+          <Property Name="ROMAN_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="KANA_NAME" Type="varchar" MaxLength="20" />
+          <Property Name="ORIGINAL_NAME_FLAG" Type="varchar" MaxLength="1" />
+          <Property Name="KANJI_ORIGINAL_NAME" Type="varchar" MaxLength="20" />
+          <Property Name="ROMAN_ORIGINAL_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="KANA_ORIGINAL_NAME" Type="varchar" MaxLength="20" />
+          <Property Name="MEN_OR_WOMEN" Type="varchar" MaxLength="1" />
+          <Property Name="STAFF_DIVISION_CODE" Type="varchar" MaxLength="1" />
+          <Property Name="STAFF_DIVISION_NAME" Type="varchar" MaxLength="40" />
+          <Property Name="BELONGING_LATEST_START_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="BELONGING_LATEST_CODE" Type="varchar" MaxLength="5" />
+          <Property Name="BBL_BU_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_START_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="BBL_END_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="BBL_BU_NAME_1" Type="varchar" MaxLength="30" />
+          <Property Name="BBL_BU_NAME_2" Type="varchar" MaxLength="30" />
+          <Property Name="BBL_BU_NAME_3" Type="varchar" MaxLength="100" />
+          <Property Name="BBL_BU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="BBL_BU_ALTERATION_MARK" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_SECTION_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_BU_LOCATION_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="BBL_BU_NUMBER" Type="varchar" MaxLength="3" />
+          <Property Name="BBL_EXECUTIVE_NUMBER" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_SHITSU_PERSON_SECTION" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_ADJUST_SECTION_NUMBER_A" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_ADJUST_SECTION_NUMBER_B" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_ADJUST_SECTION_NUMBER_C" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_ADJUST_SECTION_NUMBER_D" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_ASSESSMENT_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_RANK_RISE_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_CHANGE_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_TRAINING_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_EMPLOY_OFFICE_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="BBL_NEW_BELONGING_LIMIT_FLAG" Type="varchar" MaxLength="1" />
+          <Property Name="BBL_PERSONNEL_EXCEPTION" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_PERSONNEL_COMPULSION" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_ENGLISH_NAME" Type="varchar" MaxLength="200" />
+          <Property Name="SBL_SHITSU_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="SBL_START_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="SBL_END_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="SBL_BU_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="SBL_BU_NAME_1" Type="varchar" MaxLength="30" />
+          <Property Name="SBL_BU_NAME_2" Type="varchar" MaxLength="30" />
+          <Property Name="SBL_BU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="SBL_SHITSU_NAME" Type="varchar" MaxLength="30" />
+          <Property Name="SBL_SHITSU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="SBL_SHITSU_CHANGE_MARK" Type="varchar" MaxLength="2" />
+          <Property Name="SBL_SHITSU_LOCATION_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="SBL_SHITSU_KA_NUMBER" Type="varchar" MaxLength="2" />
+          <Property Name="SBL_SHITSU_KA_DIVISION_CODE" Type="varchar" MaxLength="1" />
+          <Property Name="SBL_NEW_BELONGING_LIMIT_FLAG" Type="varchar" MaxLength="1" />
+          <Property Name="SBL_ENGLISH_NAME" Type="varchar" MaxLength="200" />
+          <Property Name="KBL_KAKARI_CODE" Type="varchar" MaxLength="4" />
+          <Property Name="KBL_START_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="KBL_END_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="KBL_BU_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="KBL_SHITSU_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="KBL_BU_NAME_1" Type="varchar" MaxLength="30" />
+          <Property Name="KBL_BU_NAME_2" Type="varchar" MaxLength="30" />
+          <Property Name="KBL_BU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="KBL_SHITSU_NAME" Type="varchar" MaxLength="30" />
+          <Property Name="KBL_SHITSU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="KBL_KAKARI_NAME" Type="varchar" MaxLength="30" />
+          <Property Name="KBL_KAKARI_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="KBL_KAKARI_LOCATION_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="KBL_KAKARI_NUMBER" Type="varchar" MaxLength="2" />
+          <Property Name="KBL_KAKARI_DIVISION_CODE" Type="varchar" MaxLength="1" />
+          <Property Name="KBL_NEW_BELONGING_LIMIT_FLAG" Type="varchar" MaxLength="1" />
+          <Property Name="BELONGING_LATEST_BU_NAME" Type="varchar" MaxLength="30" />
+          <Property Name="BELONGING_LATEST_SHITSU_NAME" Type="varchar" MaxLength="30" />
+          <Property Name="BELONGING_LATEST_KAKARI_NAME" Type="varchar" MaxLength="30" />
+          <Property Name="LOCATION_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="LOCATION_NAME" Type="varchar" MaxLength="40" />
+          <Property Name="COMPANY_CODE" Type="varchar" MaxLength="5" />
+          <Property Name="INFORMAL_COMPANY_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="JOB_CATEGORY_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="JOB_CATEGORY_NAME" Type="varchar" MaxLength="20" />
+          <Property Name="QUALIFICATION_SYSTEM_CODE" Type="varchar" MaxLength="1" />
+          <Property Name="QUALIFICATION_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="ORIGINAL_BELONGING_FLAG" Type="varchar" MaxLength="1" />
+          <Property Name="ORIGINAL_BELONGING_START_DATE" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="ORIGINAL_BELONGING_CODE" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="BOB_BU_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BOB_START_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="BOB_END_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="BOB_BU_NAME_1" Type="varchar" MaxLength="30" />
+          <Property Name="BOB_BU_NAME_2" Type="varchar" MaxLength="30" />
+          <Property Name="BOB_BU_NAME_3" Type="varchar" MaxLength="100" />
+          <Property Name="BOB_BU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="BOB_BU_ALTERATION_MARK" Type="varchar" MaxLength="2" />
+          <Property Name="BOB_SECTION_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BOB_BU_LOCATION_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="BOB_BU_NUMBER" Type="varchar" MaxLength="3" />
+          <Property Name="BOB_EXECUTIVE_NUMBER" Type="varchar" MaxLength="2" />
+          <Property Name="BOB_SHITSU_PERSON_SECTION" Type="varchar" MaxLength="2" />
+          <Property Name="BOB_ADJUST_SECTION_NUMBER_A" Type="varchar" MaxLength="2" />
+          <Property Name="BOB_ADJUST_SECTION_NUMBER_B" Type="varchar" MaxLength="2" />
+          <Property Name="BOB_ADJUST_SECTION_NUMBER_C" Type="varchar" MaxLength="2" />
+          <Property Name="BOB_ADJUST_SECTION_NUMBER_D" Type="varchar" MaxLength="2" />
+          <Property Name="BOB_ASSESSMENT_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BOB_RANK_RISE_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BOB_CHANGE_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BOB_TRAINING_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BOB_EMPLOY_OFFICE_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="BOB_NEW_BELONGING_LIMIT_FLAG" Type="varchar" MaxLength="1" />
+          <Property Name="BOB_PERSONNEL_EXCEPTION" Type="varchar" MaxLength="2" />
+          <Property Name="BOB_PERSONNEL_COMPULSION" Type="varchar" MaxLength="2" />
+          <Property Name="BOB_ENGLISH_NAME" Type="varchar" MaxLength="200" />
+          <Property Name="SOB_SHITSU_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="SOB_START_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="SOB_END_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="SOB_BU_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="SOB_BU_NAME_1" Type="varchar" MaxLength="30" />
+          <Property Name="SOB_BU_NAME_2" Type="varchar" MaxLength="30" />
+          <Property Name="SOB_BU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="SOB_SHITSU_NAME" Type="varchar" MaxLength="30" />
+          <Property Name="SOB_SHITSU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="SOB_SHITSU_CHANGE_MARK" Type="varchar" MaxLength="2" />
+          <Property Name="SOB_SHITSU_LOCATION_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="SOB_SHITSU_KA_NUMBER" Type="varchar" MaxLength="2" />
+          <Property Name="SOB_SHITSU_KA_DIVISION_CODE" Type="varchar" MaxLength="1" />
+          <Property Name="SOB_NEW_BELONGING_LIMIT_FLAG" Type="varchar" MaxLength="1" />
+          <Property Name="SOB_ENGLISH_NAME" Type="varchar" MaxLength="200" />
+          <Property Name="KOB_KAKARI_CODE" Type="varchar" MaxLength="4" />
+          <Property Name="KOB_START_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="KOB_END_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="KOB_BU_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="KOB_SHITSU_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="KOB_BU_NAME_1" Type="varchar" MaxLength="30" />
+          <Property Name="KOB_BU_NAME_2" Type="varchar" MaxLength="30" />
+          <Property Name="KOB_BU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="KOB_SHITSU_NAME" Type="varchar" MaxLength="30" />
+          <Property Name="KOB_SHITSU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="KOB_KAKARI_NAME" Type="varchar" MaxLength="30" />
+          <Property Name="KOB_KAKARI_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="KOB_KAKARI_LOCATION_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="KOB_KAKARI_NUMBER" Type="varchar" MaxLength="2" />
+          <Property Name="KOB_KAKARI_DIVISION_CODE" Type="varchar" MaxLength="1" />
+          <Property Name="KOB_NEW_BELONGING_LIMIT_FLAG" Type="varchar" MaxLength="1" />
+          <Property Name="ABOUT_WORK_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="ABOUT_WORK_NAME" Type="varchar" MaxLength="32" />
+          <Property Name="APPROVAL_RANK_CODE" Type="varchar" MaxLength="1" />
+          <Property Name="LAYOFF_FLAG" Type="varchar" MaxLength="1" />
+          <Property Name="NONREGULAR_DIVISION_NAME" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <!--生成中に見つかったエラー:
+警告 6002: テーブル/ビュー 'JINJI.dbo.V_PERSON_OF_OTHER_COMPANY' には主キーが定義されていません。主キーは推論され、定義は読み取り専用のテーブル/ビューとして作成されました。-->
+        <EntityType Name="V_PERSON_OF_OTHER_COMPANY">
+          <Key>
+            <PropertyRef Name="STAFF_CODE" />
+          </Key>
+          <Property Name="STAFF_CODE" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="KANJI_NAME" Type="varchar" MaxLength="20" />
+          <Property Name="ROMAN_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="KANA_NAME" Type="varchar" MaxLength="20" />
+          <Property Name="STAFF_DIVISION_CODE" Type="varchar" MaxLength="1" />
+          <Property Name="ACCEPTANCE_BELONGING_CODE" Type="varchar" MaxLength="5" />
+          <Property Name="BAB_BU_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BAB_START_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="BAB_END_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="BAB_BU_NAME_1" Type="varchar" MaxLength="30" />
+          <Property Name="BAB_BU_NAME_2" Type="varchar" MaxLength="30" />
+          <Property Name="BAB_BU_NAME_3" Type="varchar" MaxLength="100" />
+          <Property Name="BAB_BU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="BAB_BU_ALTERATION_MARK" Type="varchar" MaxLength="2" />
+          <Property Name="BAB_SECTION_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BAB_BU_LOCATION_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="BAB_BU_NUMBER" Type="varchar" MaxLength="3" />
+          <Property Name="BAB_EXECUTIVE_NUMBER" Type="varchar" MaxLength="2" />
+          <Property Name="BAB_SHITSU_PERSON_SECTION" Type="varchar" MaxLength="2" />
+          <Property Name="BAB_ADJUST_SECTION_NUMBER_A" Type="varchar" MaxLength="2" />
+          <Property Name="BAB_ADJUST_SECTION_NUMBER_B" Type="varchar" MaxLength="2" />
+          <Property Name="BAB_ADJUST_SECTION_NUMBER_C" Type="varchar" MaxLength="2" />
+          <Property Name="BAB_ADJUST_SECTION_NUMBER_D" Type="varchar" MaxLength="2" />
+          <Property Name="BAB_ASSESSMENT_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BAB_RANK_RISE_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BAB_CHANGE_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BAB_TRAINING_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BAB_EMPLOY_OFFICE_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="BAB_NEW_BELONGING_LIMIT_FLAG" Type="varchar" MaxLength="1" />
+          <Property Name="BAB_PERSONNEL_EXCEPTION" Type="varchar" MaxLength="2" />
+          <Property Name="BAB_PERSONNEL_COMPULSION" Type="varchar" MaxLength="2" />
+          <Property Name="BAB_ENGLISH_NAME" Type="varchar" MaxLength="200" />
+          <Property Name="SAB_SHITSU_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="SAB_START_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="SAB_END_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="SAB_BU_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="SAB_BU_NAME_1" Type="varchar" MaxLength="30" />
+          <Property Name="SAB_BU_NAME_2" Type="varchar" MaxLength="30" />
+          <Property Name="SAB_BU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="SAB_SHITSU_NAME" Type="varchar" MaxLength="30" />
+          <Property Name="SAB_SHITSU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="SAB_SHITSU_CHANGE_MARK" Type="varchar" MaxLength="2" />
+          <Property Name="SAB_SHITSU_LOCATION_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="SAB_SHITSU_KA_NUMBER" Type="varchar" MaxLength="2" />
+          <Property Name="SAB_SHITSU_KA_DIVISION_CODE" Type="varchar" MaxLength="1" />
+          <Property Name="SAB_NEW_BELONGING_LIMIT_FLAG" Type="varchar" MaxLength="1" />
+          <Property Name="SAB_ENGLISH_NAME" Type="varchar" MaxLength="200" />
+          <Property Name="KAB_KAKARI_CODE" Type="varchar" MaxLength="4" />
+          <Property Name="KAB_START_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="KAB_END_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="KAB_BU_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="KAB_SHITSU_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="KAB_BU_NAME_1" Type="varchar" MaxLength="30" />
+          <Property Name="KAB_BU_NAME_2" Type="varchar" MaxLength="30" />
+          <Property Name="KAB_BU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="KAB_SHITSU_NAME" Type="varchar" MaxLength="30" />
+          <Property Name="KAB_SHITSU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="KAB_KAKARI_NAME" Type="varchar" MaxLength="30" />
+          <Property Name="KAB_KAKARI_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="KAB_KAKARI_LOCATION_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="KAB_KAKARI_NUMBER" Type="varchar" MaxLength="2" />
+          <Property Name="KAB_KAKARI_DIVISION_CODE" Type="varchar" MaxLength="1" />
+          <Property Name="KAB_NEW_BELONGING_LIMIT_FLAG" Type="varchar" MaxLength="1" />
+          <Property Name="START_CONTRACT_TERM" Type="varchar" MaxLength="8" />
+          <Property Name="END_CONTRACT_TERM" Type="varchar" MaxLength="8" />
+          <Property Name="WORKING_PLACE_CODE" Type="varchar" MaxLength="4" />
+          <Property Name="BELONGING_LATEST_CODE" Type="varchar" MaxLength="5" />
+          <Property Name="BBL_BU_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_START_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="BBL_END_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="BBL_BU_NAME_1" Type="varchar" MaxLength="30" />
+          <Property Name="BBL_BU_NAME_2" Type="varchar" MaxLength="30" />
+          <Property Name="BBL_BU_NAME_3" Type="varchar" MaxLength="100" />
+          <Property Name="BBL_BU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="BBL_BU_ALTERATION_MARK" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_SECTION_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_BU_LOCATION_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="BBL_BU_NUMBER" Type="varchar" MaxLength="3" />
+          <Property Name="BBL_EXECUTIVE_NUMBER" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_SHITSU_PERSON_SECTION" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_ADJUST_SECTION_NUMBER_A" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_ADJUST_SECTION_NUMBER_B" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_ADJUST_SECTION_NUMBER_C" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_ADJUST_SECTION_NUMBER_D" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_ASSESSMENT_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_RANK_RISE_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_CHANGE_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_TRAINING_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_EMPLOY_OFFICE_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="BBL_NEW_BELONGING_LIMIT_FLAG" Type="varchar" MaxLength="1" />
+          <Property Name="BBL_PERSONNEL_EXCEPTION" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_PERSONNEL_COMPULSION" Type="varchar" MaxLength="2" />
+          <Property Name="BBL_ENGLISH_NAME" Type="varchar" MaxLength="200" />
+          <Property Name="SBL_SHITSU_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="SBL_START_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="SBL_END_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="SBL_BU_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="SBL_BU_NAME_1" Type="varchar" MaxLength="30" />
+          <Property Name="SBL_BU_NAME_2" Type="varchar" MaxLength="30" />
+          <Property Name="SBL_BU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="SBL_SHITSU_NAME" Type="varchar" MaxLength="30" />
+          <Property Name="SBL_SHITSU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="SBL_SHITSU_CHANGE_MARK" Type="varchar" MaxLength="2" />
+          <Property Name="SBL_SHITSU_LOCATION_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="SBL_SHITSU_KA_NUMBER" Type="varchar" MaxLength="2" />
+          <Property Name="SBL_SHITSU_KA_DIVISION_CODE" Type="varchar" MaxLength="1" />
+          <Property Name="SBL_NEW_BELONGING_LIMIT_FLAG" Type="varchar" MaxLength="1" />
+          <Property Name="SBL_ENGLISH_NAME" Type="varchar" MaxLength="200" />
+          <Property Name="KBL_KAKARI_CODE" Type="varchar" MaxLength="4" />
+          <Property Name="KBL_START_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="KBL_END_VALIDITY_DATE" Type="varchar" MaxLength="8" />
+          <Property Name="KBL_BU_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="KBL_SHITSU_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="KBL_BU_NAME_1" Type="varchar" MaxLength="30" />
+          <Property Name="KBL_BU_NAME_2" Type="varchar" MaxLength="30" />
+          <Property Name="KBL_BU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="KBL_SHITSU_NAME" Type="varchar" MaxLength="30" />
+          <Property Name="KBL_SHITSU_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="KBL_KAKARI_NAME" Type="varchar" MaxLength="30" />
+          <Property Name="KBL_KAKARI_INFORMAL_NAME" Type="varchar" MaxLength="6" />
+          <Property Name="KBL_KAKARI_LOCATION_CODE" Type="varchar" MaxLength="3" />
+          <Property Name="KBL_KAKARI_NUMBER" Type="varchar" MaxLength="2" />
+          <Property Name="KBL_KAKARI_DIVISION_CODE" Type="varchar" MaxLength="1" />
+          <Property Name="KBL_NEW_BELONGING_LIMIT_FLAG" Type="varchar" MaxLength="1" />
+          <Property Name="ORIGINAL_CONTRACTOR_CODE" Type="varchar" MaxLength="5" />
+          <Property Name="ORIGINAL_CONTRACTOR_NAME" Type="varchar" MaxLength="60" />
+          <Property Name="BELONGING_COMPANY_CODE" Type="varchar" MaxLength="5" />
+          <Property Name="BELONGING_COMPANY_NAME" Type="varchar" MaxLength="60" />
+          <Property Name="CARD_STATUS" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityContainer Name="JINJIModelStoreContainer">
+          <EntitySet Name="V_PERSON_OF_COMPANY" EntityType="Self.V_PERSON_OF_COMPANY" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [V_PERSON_OF_COMPANY].[STAFF_CODE] AS [STAFF_CODE], 
+    [V_PERSON_OF_COMPANY].[KANJI_NAME] AS [KANJI_NAME], 
+    [V_PERSON_OF_COMPANY].[ROMAN_NAME] AS [ROMAN_NAME], 
+    [V_PERSON_OF_COMPANY].[KANA_NAME] AS [KANA_NAME], 
+    [V_PERSON_OF_COMPANY].[ORIGINAL_NAME_FLAG] AS [ORIGINAL_NAME_FLAG], 
+    [V_PERSON_OF_COMPANY].[KANJI_ORIGINAL_NAME] AS [KANJI_ORIGINAL_NAME], 
+    [V_PERSON_OF_COMPANY].[ROMAN_ORIGINAL_NAME] AS [ROMAN_ORIGINAL_NAME], 
+    [V_PERSON_OF_COMPANY].[KANA_ORIGINAL_NAME] AS [KANA_ORIGINAL_NAME], 
+    [V_PERSON_OF_COMPANY].[MEN_OR_WOMEN] AS [MEN_OR_WOMEN], 
+    [V_PERSON_OF_COMPANY].[STAFF_DIVISION_CODE] AS [STAFF_DIVISION_CODE], 
+    [V_PERSON_OF_COMPANY].[STAFF_DIVISION_NAME] AS [STAFF_DIVISION_NAME], 
+    [V_PERSON_OF_COMPANY].[BELONGING_LATEST_START_DATE] AS [BELONGING_LATEST_START_DATE], 
+    [V_PERSON_OF_COMPANY].[BELONGING_LATEST_CODE] AS [BELONGING_LATEST_CODE], 
+    [V_PERSON_OF_COMPANY].[BBL_BU_CODE] AS [BBL_BU_CODE], 
+    [V_PERSON_OF_COMPANY].[BBL_START_VALIDITY_DATE] AS [BBL_START_VALIDITY_DATE], 
+    [V_PERSON_OF_COMPANY].[BBL_END_VALIDITY_DATE] AS [BBL_END_VALIDITY_DATE], 
+    [V_PERSON_OF_COMPANY].[BBL_BU_NAME_1] AS [BBL_BU_NAME_1], 
+    [V_PERSON_OF_COMPANY].[BBL_BU_NAME_2] AS [BBL_BU_NAME_2], 
+    [V_PERSON_OF_COMPANY].[BBL_BU_NAME_3] AS [BBL_BU_NAME_3], 
+    [V_PERSON_OF_COMPANY].[BBL_BU_INFORMAL_NAME] AS [BBL_BU_INFORMAL_NAME], 
+    [V_PERSON_OF_COMPANY].[BBL_BU_ALTERATION_MARK] AS [BBL_BU_ALTERATION_MARK], 
+    [V_PERSON_OF_COMPANY].[BBL_SECTION_CODE] AS [BBL_SECTION_CODE], 
+    [V_PERSON_OF_COMPANY].[BBL_BU_LOCATION_CODE] AS [BBL_BU_LOCATION_CODE], 
+    [V_PERSON_OF_COMPANY].[BBL_BU_NUMBER] AS [BBL_BU_NUMBER], 
+    [V_PERSON_OF_COMPANY].[BBL_EXECUTIVE_NUMBER] AS [BBL_EXECUTIVE_NUMBER], 
+    [V_PERSON_OF_COMPANY].[BBL_SHITSU_PERSON_SECTION] AS [BBL_SHITSU_PERSON_SECTION], 
+    [V_PERSON_OF_COMPANY].[BBL_ADJUST_SECTION_NUMBER_A] AS [BBL_ADJUST_SECTION_NUMBER_A], 
+    [V_PERSON_OF_COMPANY].[BBL_ADJUST_SECTION_NUMBER_B] AS [BBL_ADJUST_SECTION_NUMBER_B], 
+    [V_PERSON_OF_COMPANY].[BBL_ADJUST_SECTION_NUMBER_C] AS [BBL_ADJUST_SECTION_NUMBER_C], 
+    [V_PERSON_OF_COMPANY].[BBL_ADJUST_SECTION_NUMBER_D] AS [BBL_ADJUST_SECTION_NUMBER_D], 
+    [V_PERSON_OF_COMPANY].[BBL_ASSESSMENT_CODE] AS [BBL_ASSESSMENT_CODE], 
+    [V_PERSON_OF_COMPANY].[BBL_RANK_RISE_CODE] AS [BBL_RANK_RISE_CODE], 
+    [V_PERSON_OF_COMPANY].[BBL_CHANGE_CODE] AS [BBL_CHANGE_CODE], 
+    [V_PERSON_OF_COMPANY].[BBL_TRAINING_CODE] AS [BBL_TRAINING_CODE], 
+    [V_PERSON_OF_COMPANY].[BBL_EMPLOY_OFFICE_CODE] AS [BBL_EMPLOY_OFFICE_CODE], 
+    [V_PERSON_OF_COMPANY].[BBL_NEW_BELONGING_LIMIT_FLAG] AS [BBL_NEW_BELONGING_LIMIT_FLAG], 
+    [V_PERSON_OF_COMPANY].[BBL_PERSONNEL_EXCEPTION] AS [BBL_PERSONNEL_EXCEPTION], 
+    [V_PERSON_OF_COMPANY].[BBL_PERSONNEL_COMPULSION] AS [BBL_PERSONNEL_COMPULSION], 
+    [V_PERSON_OF_COMPANY].[BBL_ENGLISH_NAME] AS [BBL_ENGLISH_NAME], 
+    [V_PERSON_OF_COMPANY].[SBL_SHITSU_CODE] AS [SBL_SHITSU_CODE], 
+    [V_PERSON_OF_COMPANY].[SBL_START_VALIDITY_DATE] AS [SBL_START_VALIDITY_DATE], 
+    [V_PERSON_OF_COMPANY].[SBL_END_VALIDITY_DATE] AS [SBL_END_VALIDITY_DATE], 
+    [V_PERSON_OF_COMPANY].[SBL_BU_CODE] AS [SBL_BU_CODE], 
+    [V_PERSON_OF_COMPANY].[SBL_BU_NAME_1] AS [SBL_BU_NAME_1], 
+    [V_PERSON_OF_COMPANY].[SBL_BU_NAME_2] AS [SBL_BU_NAME_2], 
+    [V_PERSON_OF_COMPANY].[SBL_BU_INFORMAL_NAME] AS [SBL_BU_INFORMAL_NAME], 
+    [V_PERSON_OF_COMPANY].[SBL_SHITSU_NAME] AS [SBL_SHITSU_NAME], 
+    [V_PERSON_OF_COMPANY].[SBL_SHITSU_INFORMAL_NAME] AS [SBL_SHITSU_INFORMAL_NAME], 
+    [V_PERSON_OF_COMPANY].[SBL_SHITSU_CHANGE_MARK] AS [SBL_SHITSU_CHANGE_MARK], 
+    [V_PERSON_OF_COMPANY].[SBL_SHITSU_LOCATION_CODE] AS [SBL_SHITSU_LOCATION_CODE], 
+    [V_PERSON_OF_COMPANY].[SBL_SHITSU_KA_NUMBER] AS [SBL_SHITSU_KA_NUMBER], 
+    [V_PERSON_OF_COMPANY].[SBL_SHITSU_KA_DIVISION_CODE] AS [SBL_SHITSU_KA_DIVISION_CODE], 
+    [V_PERSON_OF_COMPANY].[SBL_NEW_BELONGING_LIMIT_FLAG] AS [SBL_NEW_BELONGING_LIMIT_FLAG], 
+    [V_PERSON_OF_COMPANY].[SBL_ENGLISH_NAME] AS [SBL_ENGLISH_NAME], 
+    [V_PERSON_OF_COMPANY].[KBL_KAKARI_CODE] AS [KBL_KAKARI_CODE], 
+    [V_PERSON_OF_COMPANY].[KBL_START_VALIDITY_DATE] AS [KBL_START_VALIDITY_DATE], 
+    [V_PERSON_OF_COMPANY].[KBL_END_VALIDITY_DATE] AS [KBL_END_VALIDITY_DATE], 
+    [V_PERSON_OF_COMPANY].[KBL_BU_CODE] AS [KBL_BU_CODE], 
+    [V_PERSON_OF_COMPANY].[KBL_SHITSU_CODE] AS [KBL_SHITSU_CODE], 
+    [V_PERSON_OF_COMPANY].[KBL_BU_NAME_1] AS [KBL_BU_NAME_1], 
+    [V_PERSON_OF_COMPANY].[KBL_BU_NAME_2] AS [KBL_BU_NAME_2], 
+    [V_PERSON_OF_COMPANY].[KBL_BU_INFORMAL_NAME] AS [KBL_BU_INFORMAL_NAME], 
+    [V_PERSON_OF_COMPANY].[KBL_SHITSU_NAME] AS [KBL_SHITSU_NAME], 
+    [V_PERSON_OF_COMPANY].[KBL_SHITSU_INFORMAL_NAME] AS [KBL_SHITSU_INFORMAL_NAME], 
+    [V_PERSON_OF_COMPANY].[KBL_KAKARI_NAME] AS [KBL_KAKARI_NAME], 
+    [V_PERSON_OF_COMPANY].[KBL_KAKARI_INFORMAL_NAME] AS [KBL_KAKARI_INFORMAL_NAME], 
+    [V_PERSON_OF_COMPANY].[KBL_KAKARI_LOCATION_CODE] AS [KBL_KAKARI_LOCATION_CODE], 
+    [V_PERSON_OF_COMPANY].[KBL_KAKARI_NUMBER] AS [KBL_KAKARI_NUMBER], 
+    [V_PERSON_OF_COMPANY].[KBL_KAKARI_DIVISION_CODE] AS [KBL_KAKARI_DIVISION_CODE], 
+    [V_PERSON_OF_COMPANY].[KBL_NEW_BELONGING_LIMIT_FLAG] AS [KBL_NEW_BELONGING_LIMIT_FLAG], 
+    [V_PERSON_OF_COMPANY].[BELONGING_LATEST_BU_NAME] AS [BELONGING_LATEST_BU_NAME], 
+    [V_PERSON_OF_COMPANY].[BELONGING_LATEST_SHITSU_NAME] AS [BELONGING_LATEST_SHITSU_NAME], 
+    [V_PERSON_OF_COMPANY].[BELONGING_LATEST_KAKARI_NAME] AS [BELONGING_LATEST_KAKARI_NAME], 
+    [V_PERSON_OF_COMPANY].[LOCATION_CODE] AS [LOCATION_CODE], 
+    [V_PERSON_OF_COMPANY].[LOCATION_NAME] AS [LOCATION_NAME], 
+    [V_PERSON_OF_COMPANY].[COMPANY_CODE] AS [COMPANY_CODE], 
+    [V_PERSON_OF_COMPANY].[INFORMAL_COMPANY_NAME] AS [INFORMAL_COMPANY_NAME], 
+    [V_PERSON_OF_COMPANY].[JOB_CATEGORY_CODE] AS [JOB_CATEGORY_CODE], 
+    [V_PERSON_OF_COMPANY].[JOB_CATEGORY_NAME] AS [JOB_CATEGORY_NAME], 
+    [V_PERSON_OF_COMPANY].[QUALIFICATION_SYSTEM_CODE] AS [QUALIFICATION_SYSTEM_CODE], 
+    [V_PERSON_OF_COMPANY].[QUALIFICATION_CODE] AS [QUALIFICATION_CODE], 
+    [V_PERSON_OF_COMPANY].[ORIGINAL_BELONGING_FLAG] AS [ORIGINAL_BELONGING_FLAG], 
+    [V_PERSON_OF_COMPANY].[ORIGINAL_BELONGING_START_DATE] AS [ORIGINAL_BELONGING_START_DATE], 
+    [V_PERSON_OF_COMPANY].[ORIGINAL_BELONGING_CODE] AS [ORIGINAL_BELONGING_CODE], 
+    [V_PERSON_OF_COMPANY].[BOB_BU_CODE] AS [BOB_BU_CODE], 
+    [V_PERSON_OF_COMPANY].[BOB_START_VALIDITY_DATE] AS [BOB_START_VALIDITY_DATE], 
+    [V_PERSON_OF_COMPANY].[BOB_END_VALIDITY_DATE] AS [BOB_END_VALIDITY_DATE], 
+    [V_PERSON_OF_COMPANY].[BOB_BU_NAME_1] AS [BOB_BU_NAME_1], 
+    [V_PERSON_OF_COMPANY].[BOB_BU_NAME_2] AS [BOB_BU_NAME_2], 
+    [V_PERSON_OF_COMPANY].[BOB_BU_NAME_3] AS [BOB_BU_NAME_3], 
+    [V_PERSON_OF_COMPANY].[BOB_BU_INFORMAL_NAME] AS [BOB_BU_INFORMAL_NAME], 
+    [V_PERSON_OF_COMPANY].[BOB_BU_ALTERATION_MARK] AS [BOB_BU_ALTERATION_MARK], 
+    [V_PERSON_OF_COMPANY].[BOB_SECTION_CODE] AS [BOB_SECTION_CODE], 
+    [V_PERSON_OF_COMPANY].[BOB_BU_LOCATION_CODE] AS [BOB_BU_LOCATION_CODE], 
+    [V_PERSON_OF_COMPANY].[BOB_BU_NUMBER] AS [BOB_BU_NUMBER], 
+    [V_PERSON_OF_COMPANY].[BOB_EXECUTIVE_NUMBER] AS [BOB_EXECUTIVE_NUMBER], 
+    [V_PERSON_OF_COMPANY].[BOB_SHITSU_PERSON_SECTION] AS [BOB_SHITSU_PERSON_SECTION], 
+    [V_PERSON_OF_COMPANY].[BOB_ADJUST_SECTION_NUMBER_A] AS [BOB_ADJUST_SECTION_NUMBER_A], 
+    [V_PERSON_OF_COMPANY].[BOB_ADJUST_SECTION_NUMBER_B] AS [BOB_ADJUST_SECTION_NUMBER_B], 
+    [V_PERSON_OF_COMPANY].[BOB_ADJUST_SECTION_NUMBER_C] AS [BOB_ADJUST_SECTION_NUMBER_C], 
+    [V_PERSON_OF_COMPANY].[BOB_ADJUST_SECTION_NUMBER_D] AS [BOB_ADJUST_SECTION_NUMBER_D], 
+    [V_PERSON_OF_COMPANY].[BOB_ASSESSMENT_CODE] AS [BOB_ASSESSMENT_CODE], 
+    [V_PERSON_OF_COMPANY].[BOB_RANK_RISE_CODE] AS [BOB_RANK_RISE_CODE], 
+    [V_PERSON_OF_COMPANY].[BOB_CHANGE_CODE] AS [BOB_CHANGE_CODE], 
+    [V_PERSON_OF_COMPANY].[BOB_TRAINING_CODE] AS [BOB_TRAINING_CODE], 
+    [V_PERSON_OF_COMPANY].[BOB_EMPLOY_OFFICE_CODE] AS [BOB_EMPLOY_OFFICE_CODE], 
+    [V_PERSON_OF_COMPANY].[BOB_NEW_BELONGING_LIMIT_FLAG] AS [BOB_NEW_BELONGING_LIMIT_FLAG], 
+    [V_PERSON_OF_COMPANY].[BOB_PERSONNEL_EXCEPTION] AS [BOB_PERSONNEL_EXCEPTION], 
+    [V_PERSON_OF_COMPANY].[BOB_PERSONNEL_COMPULSION] AS [BOB_PERSONNEL_COMPULSION], 
+    [V_PERSON_OF_COMPANY].[BOB_ENGLISH_NAME] AS [BOB_ENGLISH_NAME], 
+    [V_PERSON_OF_COMPANY].[SOB_SHITSU_CODE] AS [SOB_SHITSU_CODE], 
+    [V_PERSON_OF_COMPANY].[SOB_START_VALIDITY_DATE] AS [SOB_START_VALIDITY_DATE], 
+    [V_PERSON_OF_COMPANY].[SOB_END_VALIDITY_DATE] AS [SOB_END_VALIDITY_DATE], 
+    [V_PERSON_OF_COMPANY].[SOB_BU_CODE] AS [SOB_BU_CODE], 
+    [V_PERSON_OF_COMPANY].[SOB_BU_NAME_1] AS [SOB_BU_NAME_1], 
+    [V_PERSON_OF_COMPANY].[SOB_BU_NAME_2] AS [SOB_BU_NAME_2], 
+    [V_PERSON_OF_COMPANY].[SOB_BU_INFORMAL_NAME] AS [SOB_BU_INFORMAL_NAME], 
+    [V_PERSON_OF_COMPANY].[SOB_SHITSU_NAME] AS [SOB_SHITSU_NAME], 
+    [V_PERSON_OF_COMPANY].[SOB_SHITSU_INFORMAL_NAME] AS [SOB_SHITSU_INFORMAL_NAME], 
+    [V_PERSON_OF_COMPANY].[SOB_SHITSU_CHANGE_MARK] AS [SOB_SHITSU_CHANGE_MARK], 
+    [V_PERSON_OF_COMPANY].[SOB_SHITSU_LOCATION_CODE] AS [SOB_SHITSU_LOCATION_CODE], 
+    [V_PERSON_OF_COMPANY].[SOB_SHITSU_KA_NUMBER] AS [SOB_SHITSU_KA_NUMBER], 
+    [V_PERSON_OF_COMPANY].[SOB_SHITSU_KA_DIVISION_CODE] AS [SOB_SHITSU_KA_DIVISION_CODE], 
+    [V_PERSON_OF_COMPANY].[SOB_NEW_BELONGING_LIMIT_FLAG] AS [SOB_NEW_BELONGING_LIMIT_FLAG], 
+    [V_PERSON_OF_COMPANY].[SOB_ENGLISH_NAME] AS [SOB_ENGLISH_NAME], 
+    [V_PERSON_OF_COMPANY].[KOB_KAKARI_CODE] AS [KOB_KAKARI_CODE], 
+    [V_PERSON_OF_COMPANY].[KOB_START_VALIDITY_DATE] AS [KOB_START_VALIDITY_DATE], 
+    [V_PERSON_OF_COMPANY].[KOB_END_VALIDITY_DATE] AS [KOB_END_VALIDITY_DATE], 
+    [V_PERSON_OF_COMPANY].[KOB_BU_CODE] AS [KOB_BU_CODE], 
+    [V_PERSON_OF_COMPANY].[KOB_SHITSU_CODE] AS [KOB_SHITSU_CODE], 
+    [V_PERSON_OF_COMPANY].[KOB_BU_NAME_1] AS [KOB_BU_NAME_1], 
+    [V_PERSON_OF_COMPANY].[KOB_BU_NAME_2] AS [KOB_BU_NAME_2], 
+    [V_PERSON_OF_COMPANY].[KOB_BU_INFORMAL_NAME] AS [KOB_BU_INFORMAL_NAME], 
+    [V_PERSON_OF_COMPANY].[KOB_SHITSU_NAME] AS [KOB_SHITSU_NAME], 
+    [V_PERSON_OF_COMPANY].[KOB_SHITSU_INFORMAL_NAME] AS [KOB_SHITSU_INFORMAL_NAME], 
+    [V_PERSON_OF_COMPANY].[KOB_KAKARI_NAME] AS [KOB_KAKARI_NAME], 
+    [V_PERSON_OF_COMPANY].[KOB_KAKARI_INFORMAL_NAME] AS [KOB_KAKARI_INFORMAL_NAME], 
+    [V_PERSON_OF_COMPANY].[KOB_KAKARI_LOCATION_CODE] AS [KOB_KAKARI_LOCATION_CODE], 
+    [V_PERSON_OF_COMPANY].[KOB_KAKARI_NUMBER] AS [KOB_KAKARI_NUMBER], 
+    [V_PERSON_OF_COMPANY].[KOB_KAKARI_DIVISION_CODE] AS [KOB_KAKARI_DIVISION_CODE], 
+    [V_PERSON_OF_COMPANY].[KOB_NEW_BELONGING_LIMIT_FLAG] AS [KOB_NEW_BELONGING_LIMIT_FLAG], 
+    [V_PERSON_OF_COMPANY].[ABOUT_WORK_CODE] AS [ABOUT_WORK_CODE], 
+    [V_PERSON_OF_COMPANY].[ABOUT_WORK_NAME] AS [ABOUT_WORK_NAME], 
+    [V_PERSON_OF_COMPANY].[APPROVAL_RANK_CODE] AS [APPROVAL_RANK_CODE], 
+    [V_PERSON_OF_COMPANY].[LAYOFF_FLAG] AS [LAYOFF_FLAG], 
+    [V_PERSON_OF_COMPANY].[NONREGULAR_DIVISION_NAME] AS [NONREGULAR_DIVISION_NAME]
+    FROM [dbo].[V_PERSON_OF_COMPANY] AS [V_PERSON_OF_COMPANY]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_PERSON_OF_OTHER_COMPANY" EntityType="Self.V_PERSON_OF_OTHER_COMPANY" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [V_PERSON_OF_OTHER_COMPANY].[STAFF_CODE] AS [STAFF_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[KANJI_NAME] AS [KANJI_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[ROMAN_NAME] AS [ROMAN_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[KANA_NAME] AS [KANA_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[STAFF_DIVISION_CODE] AS [STAFF_DIVISION_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[ACCEPTANCE_BELONGING_CODE] AS [ACCEPTANCE_BELONGING_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_BU_CODE] AS [BAB_BU_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_START_VALIDITY_DATE] AS [BAB_START_VALIDITY_DATE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_END_VALIDITY_DATE] AS [BAB_END_VALIDITY_DATE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_BU_NAME_1] AS [BAB_BU_NAME_1], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_BU_NAME_2] AS [BAB_BU_NAME_2], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_BU_NAME_3] AS [BAB_BU_NAME_3], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_BU_INFORMAL_NAME] AS [BAB_BU_INFORMAL_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_BU_ALTERATION_MARK] AS [BAB_BU_ALTERATION_MARK], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_SECTION_CODE] AS [BAB_SECTION_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_BU_LOCATION_CODE] AS [BAB_BU_LOCATION_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_BU_NUMBER] AS [BAB_BU_NUMBER], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_EXECUTIVE_NUMBER] AS [BAB_EXECUTIVE_NUMBER], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_SHITSU_PERSON_SECTION] AS [BAB_SHITSU_PERSON_SECTION], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_ADJUST_SECTION_NUMBER_A] AS [BAB_ADJUST_SECTION_NUMBER_A], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_ADJUST_SECTION_NUMBER_B] AS [BAB_ADJUST_SECTION_NUMBER_B], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_ADJUST_SECTION_NUMBER_C] AS [BAB_ADJUST_SECTION_NUMBER_C], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_ADJUST_SECTION_NUMBER_D] AS [BAB_ADJUST_SECTION_NUMBER_D], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_ASSESSMENT_CODE] AS [BAB_ASSESSMENT_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_RANK_RISE_CODE] AS [BAB_RANK_RISE_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_CHANGE_CODE] AS [BAB_CHANGE_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_TRAINING_CODE] AS [BAB_TRAINING_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_EMPLOY_OFFICE_CODE] AS [BAB_EMPLOY_OFFICE_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_NEW_BELONGING_LIMIT_FLAG] AS [BAB_NEW_BELONGING_LIMIT_FLAG], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_PERSONNEL_EXCEPTION] AS [BAB_PERSONNEL_EXCEPTION], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_PERSONNEL_COMPULSION] AS [BAB_PERSONNEL_COMPULSION], 
+    [V_PERSON_OF_OTHER_COMPANY].[BAB_ENGLISH_NAME] AS [BAB_ENGLISH_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[SAB_SHITSU_CODE] AS [SAB_SHITSU_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[SAB_START_VALIDITY_DATE] AS [SAB_START_VALIDITY_DATE], 
+    [V_PERSON_OF_OTHER_COMPANY].[SAB_END_VALIDITY_DATE] AS [SAB_END_VALIDITY_DATE], 
+    [V_PERSON_OF_OTHER_COMPANY].[SAB_BU_CODE] AS [SAB_BU_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[SAB_BU_NAME_1] AS [SAB_BU_NAME_1], 
+    [V_PERSON_OF_OTHER_COMPANY].[SAB_BU_NAME_2] AS [SAB_BU_NAME_2], 
+    [V_PERSON_OF_OTHER_COMPANY].[SAB_BU_INFORMAL_NAME] AS [SAB_BU_INFORMAL_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[SAB_SHITSU_NAME] AS [SAB_SHITSU_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[SAB_SHITSU_INFORMAL_NAME] AS [SAB_SHITSU_INFORMAL_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[SAB_SHITSU_CHANGE_MARK] AS [SAB_SHITSU_CHANGE_MARK], 
+    [V_PERSON_OF_OTHER_COMPANY].[SAB_SHITSU_LOCATION_CODE] AS [SAB_SHITSU_LOCATION_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[SAB_SHITSU_KA_NUMBER] AS [SAB_SHITSU_KA_NUMBER], 
+    [V_PERSON_OF_OTHER_COMPANY].[SAB_SHITSU_KA_DIVISION_CODE] AS [SAB_SHITSU_KA_DIVISION_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[SAB_NEW_BELONGING_LIMIT_FLAG] AS [SAB_NEW_BELONGING_LIMIT_FLAG], 
+    [V_PERSON_OF_OTHER_COMPANY].[SAB_ENGLISH_NAME] AS [SAB_ENGLISH_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[KAB_KAKARI_CODE] AS [KAB_KAKARI_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[KAB_START_VALIDITY_DATE] AS [KAB_START_VALIDITY_DATE], 
+    [V_PERSON_OF_OTHER_COMPANY].[KAB_END_VALIDITY_DATE] AS [KAB_END_VALIDITY_DATE], 
+    [V_PERSON_OF_OTHER_COMPANY].[KAB_BU_CODE] AS [KAB_BU_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[KAB_SHITSU_CODE] AS [KAB_SHITSU_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[KAB_BU_NAME_1] AS [KAB_BU_NAME_1], 
+    [V_PERSON_OF_OTHER_COMPANY].[KAB_BU_NAME_2] AS [KAB_BU_NAME_2], 
+    [V_PERSON_OF_OTHER_COMPANY].[KAB_BU_INFORMAL_NAME] AS [KAB_BU_INFORMAL_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[KAB_SHITSU_NAME] AS [KAB_SHITSU_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[KAB_SHITSU_INFORMAL_NAME] AS [KAB_SHITSU_INFORMAL_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[KAB_KAKARI_NAME] AS [KAB_KAKARI_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[KAB_KAKARI_INFORMAL_NAME] AS [KAB_KAKARI_INFORMAL_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[KAB_KAKARI_LOCATION_CODE] AS [KAB_KAKARI_LOCATION_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[KAB_KAKARI_NUMBER] AS [KAB_KAKARI_NUMBER], 
+    [V_PERSON_OF_OTHER_COMPANY].[KAB_KAKARI_DIVISION_CODE] AS [KAB_KAKARI_DIVISION_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[KAB_NEW_BELONGING_LIMIT_FLAG] AS [KAB_NEW_BELONGING_LIMIT_FLAG], 
+    [V_PERSON_OF_OTHER_COMPANY].[START_CONTRACT_TERM] AS [START_CONTRACT_TERM], 
+    [V_PERSON_OF_OTHER_COMPANY].[END_CONTRACT_TERM] AS [END_CONTRACT_TERM], 
+    [V_PERSON_OF_OTHER_COMPANY].[WORKING_PLACE_CODE] AS [WORKING_PLACE_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BELONGING_LATEST_CODE] AS [BELONGING_LATEST_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_BU_CODE] AS [BBL_BU_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_START_VALIDITY_DATE] AS [BBL_START_VALIDITY_DATE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_END_VALIDITY_DATE] AS [BBL_END_VALIDITY_DATE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_BU_NAME_1] AS [BBL_BU_NAME_1], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_BU_NAME_2] AS [BBL_BU_NAME_2], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_BU_NAME_3] AS [BBL_BU_NAME_3], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_BU_INFORMAL_NAME] AS [BBL_BU_INFORMAL_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_BU_ALTERATION_MARK] AS [BBL_BU_ALTERATION_MARK], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_SECTION_CODE] AS [BBL_SECTION_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_BU_LOCATION_CODE] AS [BBL_BU_LOCATION_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_BU_NUMBER] AS [BBL_BU_NUMBER], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_EXECUTIVE_NUMBER] AS [BBL_EXECUTIVE_NUMBER], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_SHITSU_PERSON_SECTION] AS [BBL_SHITSU_PERSON_SECTION], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_ADJUST_SECTION_NUMBER_A] AS [BBL_ADJUST_SECTION_NUMBER_A], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_ADJUST_SECTION_NUMBER_B] AS [BBL_ADJUST_SECTION_NUMBER_B], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_ADJUST_SECTION_NUMBER_C] AS [BBL_ADJUST_SECTION_NUMBER_C], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_ADJUST_SECTION_NUMBER_D] AS [BBL_ADJUST_SECTION_NUMBER_D], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_ASSESSMENT_CODE] AS [BBL_ASSESSMENT_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_RANK_RISE_CODE] AS [BBL_RANK_RISE_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_CHANGE_CODE] AS [BBL_CHANGE_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_TRAINING_CODE] AS [BBL_TRAINING_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_EMPLOY_OFFICE_CODE] AS [BBL_EMPLOY_OFFICE_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_NEW_BELONGING_LIMIT_FLAG] AS [BBL_NEW_BELONGING_LIMIT_FLAG], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_PERSONNEL_EXCEPTION] AS [BBL_PERSONNEL_EXCEPTION], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_PERSONNEL_COMPULSION] AS [BBL_PERSONNEL_COMPULSION], 
+    [V_PERSON_OF_OTHER_COMPANY].[BBL_ENGLISH_NAME] AS [BBL_ENGLISH_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[SBL_SHITSU_CODE] AS [SBL_SHITSU_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[SBL_START_VALIDITY_DATE] AS [SBL_START_VALIDITY_DATE], 
+    [V_PERSON_OF_OTHER_COMPANY].[SBL_END_VALIDITY_DATE] AS [SBL_END_VALIDITY_DATE], 
+    [V_PERSON_OF_OTHER_COMPANY].[SBL_BU_CODE] AS [SBL_BU_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[SBL_BU_NAME_1] AS [SBL_BU_NAME_1], 
+    [V_PERSON_OF_OTHER_COMPANY].[SBL_BU_NAME_2] AS [SBL_BU_NAME_2], 
+    [V_PERSON_OF_OTHER_COMPANY].[SBL_BU_INFORMAL_NAME] AS [SBL_BU_INFORMAL_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[SBL_SHITSU_NAME] AS [SBL_SHITSU_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[SBL_SHITSU_INFORMAL_NAME] AS [SBL_SHITSU_INFORMAL_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[SBL_SHITSU_CHANGE_MARK] AS [SBL_SHITSU_CHANGE_MARK], 
+    [V_PERSON_OF_OTHER_COMPANY].[SBL_SHITSU_LOCATION_CODE] AS [SBL_SHITSU_LOCATION_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[SBL_SHITSU_KA_NUMBER] AS [SBL_SHITSU_KA_NUMBER], 
+    [V_PERSON_OF_OTHER_COMPANY].[SBL_SHITSU_KA_DIVISION_CODE] AS [SBL_SHITSU_KA_DIVISION_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[SBL_NEW_BELONGING_LIMIT_FLAG] AS [SBL_NEW_BELONGING_LIMIT_FLAG], 
+    [V_PERSON_OF_OTHER_COMPANY].[SBL_ENGLISH_NAME] AS [SBL_ENGLISH_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[KBL_KAKARI_CODE] AS [KBL_KAKARI_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[KBL_START_VALIDITY_DATE] AS [KBL_START_VALIDITY_DATE], 
+    [V_PERSON_OF_OTHER_COMPANY].[KBL_END_VALIDITY_DATE] AS [KBL_END_VALIDITY_DATE], 
+    [V_PERSON_OF_OTHER_COMPANY].[KBL_BU_CODE] AS [KBL_BU_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[KBL_SHITSU_CODE] AS [KBL_SHITSU_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[KBL_BU_NAME_1] AS [KBL_BU_NAME_1], 
+    [V_PERSON_OF_OTHER_COMPANY].[KBL_BU_NAME_2] AS [KBL_BU_NAME_2], 
+    [V_PERSON_OF_OTHER_COMPANY].[KBL_BU_INFORMAL_NAME] AS [KBL_BU_INFORMAL_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[KBL_SHITSU_NAME] AS [KBL_SHITSU_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[KBL_SHITSU_INFORMAL_NAME] AS [KBL_SHITSU_INFORMAL_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[KBL_KAKARI_NAME] AS [KBL_KAKARI_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[KBL_KAKARI_INFORMAL_NAME] AS [KBL_KAKARI_INFORMAL_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[KBL_KAKARI_LOCATION_CODE] AS [KBL_KAKARI_LOCATION_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[KBL_KAKARI_NUMBER] AS [KBL_KAKARI_NUMBER], 
+    [V_PERSON_OF_OTHER_COMPANY].[KBL_KAKARI_DIVISION_CODE] AS [KBL_KAKARI_DIVISION_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[KBL_NEW_BELONGING_LIMIT_FLAG] AS [KBL_NEW_BELONGING_LIMIT_FLAG], 
+    [V_PERSON_OF_OTHER_COMPANY].[ORIGINAL_CONTRACTOR_CODE] AS [ORIGINAL_CONTRACTOR_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[ORIGINAL_CONTRACTOR_NAME] AS [ORIGINAL_CONTRACTOR_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[BELONGING_COMPANY_CODE] AS [BELONGING_COMPANY_CODE], 
+    [V_PERSON_OF_OTHER_COMPANY].[BELONGING_COMPANY_NAME] AS [BELONGING_COMPANY_NAME], 
+    [V_PERSON_OF_OTHER_COMPANY].[CARD_STATUS] AS [CARD_STATUS]
+    FROM [dbo].[V_PERSON_OF_OTHER_COMPANY] AS [V_PERSON_OF_OTHER_COMPANY]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="JINJIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="JINJIEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="V_PERSON_OF_COMPANY" EntityType="JINJIModel.V_PERSON_OF_COMPANY" />
+          <EntitySet Name="V_PERSON_OF_OTHER_COMPANY" EntityType="JINJIModel.V_PERSON_OF_OTHER_COMPANY" />
+        </EntityContainer>
+        <EntityType Name="V_PERSON_OF_COMPANY">
+          <Key>
+            <PropertyRef Name="STAFF_CODE" />
+            <PropertyRef Name="ORIGINAL_BELONGING_START_DATE" />
+            <PropertyRef Name="ORIGINAL_BELONGING_CODE" />
+          </Key>
+          <Property Name="STAFF_CODE" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="KANJI_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ROMAN_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="KANA_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ORIGINAL_NAME_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="KANJI_ORIGINAL_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ROMAN_ORIGINAL_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="KANA_ORIGINAL_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MEN_OR_WOMEN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_DIVISION_CODE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_DIVISION_NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="BELONGING_LATEST_START_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="BELONGING_LATEST_CODE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_BU_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_START_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_END_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_BU_NAME_1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_BU_NAME_2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_BU_NAME_3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_BU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_BU_ALTERATION_MARK" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_SECTION_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_BU_LOCATION_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_BU_NUMBER" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_EXECUTIVE_NUMBER" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_SHITSU_PERSON_SECTION" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_ADJUST_SECTION_NUMBER_A" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_ADJUST_SECTION_NUMBER_B" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_ADJUST_SECTION_NUMBER_C" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_ADJUST_SECTION_NUMBER_D" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_ASSESSMENT_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_RANK_RISE_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_CHANGE_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_TRAINING_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_EMPLOY_OFFICE_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_NEW_BELONGING_LIMIT_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_PERSONNEL_EXCEPTION" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_PERSONNEL_COMPULSION" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_ENGLISH_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_SHITSU_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_START_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_END_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_BU_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_BU_NAME_1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_BU_NAME_2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_BU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_SHITSU_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_SHITSU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_SHITSU_CHANGE_MARK" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_SHITSU_LOCATION_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_SHITSU_KA_NUMBER" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_SHITSU_KA_DIVISION_CODE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_NEW_BELONGING_LIMIT_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_ENGLISH_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_KAKARI_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_START_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_END_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_BU_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_SHITSU_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_BU_NAME_1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_BU_NAME_2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_BU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_SHITSU_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_SHITSU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_KAKARI_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_KAKARI_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_KAKARI_LOCATION_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_KAKARI_NUMBER" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_KAKARI_DIVISION_CODE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_NEW_BELONGING_LIMIT_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="BELONGING_LATEST_BU_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="BELONGING_LATEST_SHITSU_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="BELONGING_LATEST_KAKARI_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="LOCATION_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="LOCATION_NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="COMPANY_CODE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="INFORMAL_COMPANY_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="JOB_CATEGORY_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="JOB_CATEGORY_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="QUALIFICATION_SYSTEM_CODE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="QUALIFICATION_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="ORIGINAL_BELONGING_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ORIGINAL_BELONGING_START_DATE" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="ORIGINAL_BELONGING_CODE" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_BU_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_START_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_END_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_BU_NAME_1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_BU_NAME_2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_BU_NAME_3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_BU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_BU_ALTERATION_MARK" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_SECTION_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_BU_LOCATION_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_BU_NUMBER" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_EXECUTIVE_NUMBER" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_SHITSU_PERSON_SECTION" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_ADJUST_SECTION_NUMBER_A" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_ADJUST_SECTION_NUMBER_B" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_ADJUST_SECTION_NUMBER_C" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_ADJUST_SECTION_NUMBER_D" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_ASSESSMENT_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_RANK_RISE_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_CHANGE_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_TRAINING_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_EMPLOY_OFFICE_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_NEW_BELONGING_LIMIT_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_PERSONNEL_EXCEPTION" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_PERSONNEL_COMPULSION" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BOB_ENGLISH_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SOB_SHITSU_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="SOB_START_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="SOB_END_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="SOB_BU_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="SOB_BU_NAME_1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SOB_BU_NAME_2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SOB_BU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="SOB_SHITSU_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SOB_SHITSU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="SOB_SHITSU_CHANGE_MARK" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="SOB_SHITSU_LOCATION_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="SOB_SHITSU_KA_NUMBER" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="SOB_SHITSU_KA_DIVISION_CODE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SOB_NEW_BELONGING_LIMIT_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SOB_ENGLISH_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="KOB_KAKARI_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="KOB_START_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="KOB_END_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="KOB_BU_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="KOB_SHITSU_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="KOB_BU_NAME_1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="KOB_BU_NAME_2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="KOB_BU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="KOB_SHITSU_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="KOB_SHITSU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="KOB_KAKARI_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="KOB_KAKARI_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="KOB_KAKARI_LOCATION_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="KOB_KAKARI_NUMBER" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="KOB_KAKARI_DIVISION_CODE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="KOB_NEW_BELONGING_LIMIT_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ABOUT_WORK_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="ABOUT_WORK_NAME" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="APPROVAL_RANK_CODE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="LAYOFF_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="NONREGULAR_DIVISION_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="V_PERSON_OF_OTHER_COMPANY">
+          <Key>
+            <PropertyRef Name="STAFF_CODE" />
+          </Key>
+          <Property Name="STAFF_CODE" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="KANJI_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ROMAN_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="KANA_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="STAFF_DIVISION_CODE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ACCEPTANCE_BELONGING_CODE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_BU_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_START_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_END_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_BU_NAME_1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_BU_NAME_2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_BU_NAME_3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_BU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_BU_ALTERATION_MARK" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_SECTION_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_BU_LOCATION_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_BU_NUMBER" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_EXECUTIVE_NUMBER" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_SHITSU_PERSON_SECTION" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_ADJUST_SECTION_NUMBER_A" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_ADJUST_SECTION_NUMBER_B" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_ADJUST_SECTION_NUMBER_C" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_ADJUST_SECTION_NUMBER_D" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_ASSESSMENT_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_RANK_RISE_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_CHANGE_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_TRAINING_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_EMPLOY_OFFICE_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_NEW_BELONGING_LIMIT_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_PERSONNEL_EXCEPTION" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_PERSONNEL_COMPULSION" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BAB_ENGLISH_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SAB_SHITSU_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="SAB_START_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="SAB_END_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="SAB_BU_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="SAB_BU_NAME_1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SAB_BU_NAME_2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SAB_BU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="SAB_SHITSU_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SAB_SHITSU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="SAB_SHITSU_CHANGE_MARK" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="SAB_SHITSU_LOCATION_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="SAB_SHITSU_KA_NUMBER" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="SAB_SHITSU_KA_DIVISION_CODE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SAB_NEW_BELONGING_LIMIT_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SAB_ENGLISH_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="KAB_KAKARI_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="KAB_START_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="KAB_END_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="KAB_BU_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="KAB_SHITSU_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="KAB_BU_NAME_1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="KAB_BU_NAME_2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="KAB_BU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="KAB_SHITSU_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="KAB_SHITSU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="KAB_KAKARI_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="KAB_KAKARI_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="KAB_KAKARI_LOCATION_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="KAB_KAKARI_NUMBER" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="KAB_KAKARI_DIVISION_CODE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="KAB_NEW_BELONGING_LIMIT_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="START_CONTRACT_TERM" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="END_CONTRACT_TERM" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="WORKING_PLACE_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="BELONGING_LATEST_CODE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_BU_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_START_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_END_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_BU_NAME_1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_BU_NAME_2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_BU_NAME_3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_BU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_BU_ALTERATION_MARK" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_SECTION_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_BU_LOCATION_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_BU_NUMBER" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_EXECUTIVE_NUMBER" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_SHITSU_PERSON_SECTION" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_ADJUST_SECTION_NUMBER_A" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_ADJUST_SECTION_NUMBER_B" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_ADJUST_SECTION_NUMBER_C" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_ADJUST_SECTION_NUMBER_D" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_ASSESSMENT_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_RANK_RISE_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_CHANGE_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_TRAINING_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_EMPLOY_OFFICE_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_NEW_BELONGING_LIMIT_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_PERSONNEL_EXCEPTION" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_PERSONNEL_COMPULSION" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BBL_ENGLISH_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_SHITSU_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_START_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_END_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_BU_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_BU_NAME_1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_BU_NAME_2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_BU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_SHITSU_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_SHITSU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_SHITSU_CHANGE_MARK" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_SHITSU_LOCATION_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_SHITSU_KA_NUMBER" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_SHITSU_KA_DIVISION_CODE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_NEW_BELONGING_LIMIT_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SBL_ENGLISH_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_KAKARI_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_START_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_END_VALIDITY_DATE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_BU_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_SHITSU_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_BU_NAME_1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_BU_NAME_2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_BU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_SHITSU_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_SHITSU_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_KAKARI_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_KAKARI_INFORMAL_NAME" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_KAKARI_LOCATION_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_KAKARI_NUMBER" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_KAKARI_DIVISION_CODE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="KBL_NEW_BELONGING_LIMIT_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ORIGINAL_CONTRACTOR_CODE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="ORIGINAL_CONTRACTOR_NAME" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="BELONGING_COMPANY_CODE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="BELONGING_COMPANY_NAME" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CARD_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="JINJIModelStoreContainer" CdmEntityContainer="JINJIEntities1">
+          <EntitySetMapping Name="V_PERSON_OF_COMPANY">
+            <EntityTypeMapping TypeName="JINJIModel.V_PERSON_OF_COMPANY">
+              <MappingFragment StoreEntitySet="V_PERSON_OF_COMPANY">
+                <ScalarProperty Name="NONREGULAR_DIVISION_NAME" ColumnName="NONREGULAR_DIVISION_NAME" />
+                <ScalarProperty Name="LAYOFF_FLAG" ColumnName="LAYOFF_FLAG" />
+                <ScalarProperty Name="APPROVAL_RANK_CODE" ColumnName="APPROVAL_RANK_CODE" />
+                <ScalarProperty Name="ABOUT_WORK_NAME" ColumnName="ABOUT_WORK_NAME" />
+                <ScalarProperty Name="ABOUT_WORK_CODE" ColumnName="ABOUT_WORK_CODE" />
+                <ScalarProperty Name="KOB_NEW_BELONGING_LIMIT_FLAG" ColumnName="KOB_NEW_BELONGING_LIMIT_FLAG" />
+                <ScalarProperty Name="KOB_KAKARI_DIVISION_CODE" ColumnName="KOB_KAKARI_DIVISION_CODE" />
+                <ScalarProperty Name="KOB_KAKARI_NUMBER" ColumnName="KOB_KAKARI_NUMBER" />
+                <ScalarProperty Name="KOB_KAKARI_LOCATION_CODE" ColumnName="KOB_KAKARI_LOCATION_CODE" />
+                <ScalarProperty Name="KOB_KAKARI_INFORMAL_NAME" ColumnName="KOB_KAKARI_INFORMAL_NAME" />
+                <ScalarProperty Name="KOB_KAKARI_NAME" ColumnName="KOB_KAKARI_NAME" />
+                <ScalarProperty Name="KOB_SHITSU_INFORMAL_NAME" ColumnName="KOB_SHITSU_INFORMAL_NAME" />
+                <ScalarProperty Name="KOB_SHITSU_NAME" ColumnName="KOB_SHITSU_NAME" />
+                <ScalarProperty Name="KOB_BU_INFORMAL_NAME" ColumnName="KOB_BU_INFORMAL_NAME" />
+                <ScalarProperty Name="KOB_BU_NAME_2" ColumnName="KOB_BU_NAME_2" />
+                <ScalarProperty Name="KOB_BU_NAME_1" ColumnName="KOB_BU_NAME_1" />
+                <ScalarProperty Name="KOB_SHITSU_CODE" ColumnName="KOB_SHITSU_CODE" />
+                <ScalarProperty Name="KOB_BU_CODE" ColumnName="KOB_BU_CODE" />
+                <ScalarProperty Name="KOB_END_VALIDITY_DATE" ColumnName="KOB_END_VALIDITY_DATE" />
+                <ScalarProperty Name="KOB_START_VALIDITY_DATE" ColumnName="KOB_START_VALIDITY_DATE" />
+                <ScalarProperty Name="KOB_KAKARI_CODE" ColumnName="KOB_KAKARI_CODE" />
+                <ScalarProperty Name="SOB_ENGLISH_NAME" ColumnName="SOB_ENGLISH_NAME" />
+                <ScalarProperty Name="SOB_NEW_BELONGING_LIMIT_FLAG" ColumnName="SOB_NEW_BELONGING_LIMIT_FLAG" />
+                <ScalarProperty Name="SOB_SHITSU_KA_DIVISION_CODE" ColumnName="SOB_SHITSU_KA_DIVISION_CODE" />
+                <ScalarProperty Name="SOB_SHITSU_KA_NUMBER" ColumnName="SOB_SHITSU_KA_NUMBER" />
+                <ScalarProperty Name="SOB_SHITSU_LOCATION_CODE" ColumnName="SOB_SHITSU_LOCATION_CODE" />
+                <ScalarProperty Name="SOB_SHITSU_CHANGE_MARK" ColumnName="SOB_SHITSU_CHANGE_MARK" />
+                <ScalarProperty Name="SOB_SHITSU_INFORMAL_NAME" ColumnName="SOB_SHITSU_INFORMAL_NAME" />
+                <ScalarProperty Name="SOB_SHITSU_NAME" ColumnName="SOB_SHITSU_NAME" />
+                <ScalarProperty Name="SOB_BU_INFORMAL_NAME" ColumnName="SOB_BU_INFORMAL_NAME" />
+                <ScalarProperty Name="SOB_BU_NAME_2" ColumnName="SOB_BU_NAME_2" />
+                <ScalarProperty Name="SOB_BU_NAME_1" ColumnName="SOB_BU_NAME_1" />
+                <ScalarProperty Name="SOB_BU_CODE" ColumnName="SOB_BU_CODE" />
+                <ScalarProperty Name="SOB_END_VALIDITY_DATE" ColumnName="SOB_END_VALIDITY_DATE" />
+                <ScalarProperty Name="SOB_START_VALIDITY_DATE" ColumnName="SOB_START_VALIDITY_DATE" />
+                <ScalarProperty Name="SOB_SHITSU_CODE" ColumnName="SOB_SHITSU_CODE" />
+                <ScalarProperty Name="BOB_ENGLISH_NAME" ColumnName="BOB_ENGLISH_NAME" />
+                <ScalarProperty Name="BOB_PERSONNEL_COMPULSION" ColumnName="BOB_PERSONNEL_COMPULSION" />
+                <ScalarProperty Name="BOB_PERSONNEL_EXCEPTION" ColumnName="BOB_PERSONNEL_EXCEPTION" />
+                <ScalarProperty Name="BOB_NEW_BELONGING_LIMIT_FLAG" ColumnName="BOB_NEW_BELONGING_LIMIT_FLAG" />
+                <ScalarProperty Name="BOB_EMPLOY_OFFICE_CODE" ColumnName="BOB_EMPLOY_OFFICE_CODE" />
+                <ScalarProperty Name="BOB_TRAINING_CODE" ColumnName="BOB_TRAINING_CODE" />
+                <ScalarProperty Name="BOB_CHANGE_CODE" ColumnName="BOB_CHANGE_CODE" />
+                <ScalarProperty Name="BOB_RANK_RISE_CODE" ColumnName="BOB_RANK_RISE_CODE" />
+                <ScalarProperty Name="BOB_ASSESSMENT_CODE" ColumnName="BOB_ASSESSMENT_CODE" />
+                <ScalarProperty Name="BOB_ADJUST_SECTION_NUMBER_D" ColumnName="BOB_ADJUST_SECTION_NUMBER_D" />
+                <ScalarProperty Name="BOB_ADJUST_SECTION_NUMBER_C" ColumnName="BOB_ADJUST_SECTION_NUMBER_C" />
+                <ScalarProperty Name="BOB_ADJUST_SECTION_NUMBER_B" ColumnName="BOB_ADJUST_SECTION_NUMBER_B" />
+                <ScalarProperty Name="BOB_ADJUST_SECTION_NUMBER_A" ColumnName="BOB_ADJUST_SECTION_NUMBER_A" />
+                <ScalarProperty Name="BOB_SHITSU_PERSON_SECTION" ColumnName="BOB_SHITSU_PERSON_SECTION" />
+                <ScalarProperty Name="BOB_EXECUTIVE_NUMBER" ColumnName="BOB_EXECUTIVE_NUMBER" />
+                <ScalarProperty Name="BOB_BU_NUMBER" ColumnName="BOB_BU_NUMBER" />
+                <ScalarProperty Name="BOB_BU_LOCATION_CODE" ColumnName="BOB_BU_LOCATION_CODE" />
+                <ScalarProperty Name="BOB_SECTION_CODE" ColumnName="BOB_SECTION_CODE" />
+                <ScalarProperty Name="BOB_BU_ALTERATION_MARK" ColumnName="BOB_BU_ALTERATION_MARK" />
+                <ScalarProperty Name="BOB_BU_INFORMAL_NAME" ColumnName="BOB_BU_INFORMAL_NAME" />
+                <ScalarProperty Name="BOB_BU_NAME_3" ColumnName="BOB_BU_NAME_3" />
+                <ScalarProperty Name="BOB_BU_NAME_2" ColumnName="BOB_BU_NAME_2" />
+                <ScalarProperty Name="BOB_BU_NAME_1" ColumnName="BOB_BU_NAME_1" />
+                <ScalarProperty Name="BOB_END_VALIDITY_DATE" ColumnName="BOB_END_VALIDITY_DATE" />
+                <ScalarProperty Name="BOB_START_VALIDITY_DATE" ColumnName="BOB_START_VALIDITY_DATE" />
+                <ScalarProperty Name="BOB_BU_CODE" ColumnName="BOB_BU_CODE" />
+                <ScalarProperty Name="ORIGINAL_BELONGING_CODE" ColumnName="ORIGINAL_BELONGING_CODE" />
+                <ScalarProperty Name="ORIGINAL_BELONGING_START_DATE" ColumnName="ORIGINAL_BELONGING_START_DATE" />
+                <ScalarProperty Name="ORIGINAL_BELONGING_FLAG" ColumnName="ORIGINAL_BELONGING_FLAG" />
+                <ScalarProperty Name="QUALIFICATION_CODE" ColumnName="QUALIFICATION_CODE" />
+                <ScalarProperty Name="QUALIFICATION_SYSTEM_CODE" ColumnName="QUALIFICATION_SYSTEM_CODE" />
+                <ScalarProperty Name="JOB_CATEGORY_NAME" ColumnName="JOB_CATEGORY_NAME" />
+                <ScalarProperty Name="JOB_CATEGORY_CODE" ColumnName="JOB_CATEGORY_CODE" />
+                <ScalarProperty Name="INFORMAL_COMPANY_NAME" ColumnName="INFORMAL_COMPANY_NAME" />
+                <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+                <ScalarProperty Name="LOCATION_NAME" ColumnName="LOCATION_NAME" />
+                <ScalarProperty Name="LOCATION_CODE" ColumnName="LOCATION_CODE" />
+                <ScalarProperty Name="BELONGING_LATEST_KAKARI_NAME" ColumnName="BELONGING_LATEST_KAKARI_NAME" />
+                <ScalarProperty Name="BELONGING_LATEST_SHITSU_NAME" ColumnName="BELONGING_LATEST_SHITSU_NAME" />
+                <ScalarProperty Name="BELONGING_LATEST_BU_NAME" ColumnName="BELONGING_LATEST_BU_NAME" />
+                <ScalarProperty Name="KBL_NEW_BELONGING_LIMIT_FLAG" ColumnName="KBL_NEW_BELONGING_LIMIT_FLAG" />
+                <ScalarProperty Name="KBL_KAKARI_DIVISION_CODE" ColumnName="KBL_KAKARI_DIVISION_CODE" />
+                <ScalarProperty Name="KBL_KAKARI_NUMBER" ColumnName="KBL_KAKARI_NUMBER" />
+                <ScalarProperty Name="KBL_KAKARI_LOCATION_CODE" ColumnName="KBL_KAKARI_LOCATION_CODE" />
+                <ScalarProperty Name="KBL_KAKARI_INFORMAL_NAME" ColumnName="KBL_KAKARI_INFORMAL_NAME" />
+                <ScalarProperty Name="KBL_KAKARI_NAME" ColumnName="KBL_KAKARI_NAME" />
+                <ScalarProperty Name="KBL_SHITSU_INFORMAL_NAME" ColumnName="KBL_SHITSU_INFORMAL_NAME" />
+                <ScalarProperty Name="KBL_SHITSU_NAME" ColumnName="KBL_SHITSU_NAME" />
+                <ScalarProperty Name="KBL_BU_INFORMAL_NAME" ColumnName="KBL_BU_INFORMAL_NAME" />
+                <ScalarProperty Name="KBL_BU_NAME_2" ColumnName="KBL_BU_NAME_2" />
+                <ScalarProperty Name="KBL_BU_NAME_1" ColumnName="KBL_BU_NAME_1" />
+                <ScalarProperty Name="KBL_SHITSU_CODE" ColumnName="KBL_SHITSU_CODE" />
+                <ScalarProperty Name="KBL_BU_CODE" ColumnName="KBL_BU_CODE" />
+                <ScalarProperty Name="KBL_END_VALIDITY_DATE" ColumnName="KBL_END_VALIDITY_DATE" />
+                <ScalarProperty Name="KBL_START_VALIDITY_DATE" ColumnName="KBL_START_VALIDITY_DATE" />
+                <ScalarProperty Name="KBL_KAKARI_CODE" ColumnName="KBL_KAKARI_CODE" />
+                <ScalarProperty Name="SBL_ENGLISH_NAME" ColumnName="SBL_ENGLISH_NAME" />
+                <ScalarProperty Name="SBL_NEW_BELONGING_LIMIT_FLAG" ColumnName="SBL_NEW_BELONGING_LIMIT_FLAG" />
+                <ScalarProperty Name="SBL_SHITSU_KA_DIVISION_CODE" ColumnName="SBL_SHITSU_KA_DIVISION_CODE" />
+                <ScalarProperty Name="SBL_SHITSU_KA_NUMBER" ColumnName="SBL_SHITSU_KA_NUMBER" />
+                <ScalarProperty Name="SBL_SHITSU_LOCATION_CODE" ColumnName="SBL_SHITSU_LOCATION_CODE" />
+                <ScalarProperty Name="SBL_SHITSU_CHANGE_MARK" ColumnName="SBL_SHITSU_CHANGE_MARK" />
+                <ScalarProperty Name="SBL_SHITSU_INFORMAL_NAME" ColumnName="SBL_SHITSU_INFORMAL_NAME" />
+                <ScalarProperty Name="SBL_SHITSU_NAME" ColumnName="SBL_SHITSU_NAME" />
+                <ScalarProperty Name="SBL_BU_INFORMAL_NAME" ColumnName="SBL_BU_INFORMAL_NAME" />
+                <ScalarProperty Name="SBL_BU_NAME_2" ColumnName="SBL_BU_NAME_2" />
+                <ScalarProperty Name="SBL_BU_NAME_1" ColumnName="SBL_BU_NAME_1" />
+                <ScalarProperty Name="SBL_BU_CODE" ColumnName="SBL_BU_CODE" />
+                <ScalarProperty Name="SBL_END_VALIDITY_DATE" ColumnName="SBL_END_VALIDITY_DATE" />
+                <ScalarProperty Name="SBL_START_VALIDITY_DATE" ColumnName="SBL_START_VALIDITY_DATE" />
+                <ScalarProperty Name="SBL_SHITSU_CODE" ColumnName="SBL_SHITSU_CODE" />
+                <ScalarProperty Name="BBL_ENGLISH_NAME" ColumnName="BBL_ENGLISH_NAME" />
+                <ScalarProperty Name="BBL_PERSONNEL_COMPULSION" ColumnName="BBL_PERSONNEL_COMPULSION" />
+                <ScalarProperty Name="BBL_PERSONNEL_EXCEPTION" ColumnName="BBL_PERSONNEL_EXCEPTION" />
+                <ScalarProperty Name="BBL_NEW_BELONGING_LIMIT_FLAG" ColumnName="BBL_NEW_BELONGING_LIMIT_FLAG" />
+                <ScalarProperty Name="BBL_EMPLOY_OFFICE_CODE" ColumnName="BBL_EMPLOY_OFFICE_CODE" />
+                <ScalarProperty Name="BBL_TRAINING_CODE" ColumnName="BBL_TRAINING_CODE" />
+                <ScalarProperty Name="BBL_CHANGE_CODE" ColumnName="BBL_CHANGE_CODE" />
+                <ScalarProperty Name="BBL_RANK_RISE_CODE" ColumnName="BBL_RANK_RISE_CODE" />
+                <ScalarProperty Name="BBL_ASSESSMENT_CODE" ColumnName="BBL_ASSESSMENT_CODE" />
+                <ScalarProperty Name="BBL_ADJUST_SECTION_NUMBER_D" ColumnName="BBL_ADJUST_SECTION_NUMBER_D" />
+                <ScalarProperty Name="BBL_ADJUST_SECTION_NUMBER_C" ColumnName="BBL_ADJUST_SECTION_NUMBER_C" />
+                <ScalarProperty Name="BBL_ADJUST_SECTION_NUMBER_B" ColumnName="BBL_ADJUST_SECTION_NUMBER_B" />
+                <ScalarProperty Name="BBL_ADJUST_SECTION_NUMBER_A" ColumnName="BBL_ADJUST_SECTION_NUMBER_A" />
+                <ScalarProperty Name="BBL_SHITSU_PERSON_SECTION" ColumnName="BBL_SHITSU_PERSON_SECTION" />
+                <ScalarProperty Name="BBL_EXECUTIVE_NUMBER" ColumnName="BBL_EXECUTIVE_NUMBER" />
+                <ScalarProperty Name="BBL_BU_NUMBER" ColumnName="BBL_BU_NUMBER" />
+                <ScalarProperty Name="BBL_BU_LOCATION_CODE" ColumnName="BBL_BU_LOCATION_CODE" />
+                <ScalarProperty Name="BBL_SECTION_CODE" ColumnName="BBL_SECTION_CODE" />
+                <ScalarProperty Name="BBL_BU_ALTERATION_MARK" ColumnName="BBL_BU_ALTERATION_MARK" />
+                <ScalarProperty Name="BBL_BU_INFORMAL_NAME" ColumnName="BBL_BU_INFORMAL_NAME" />
+                <ScalarProperty Name="BBL_BU_NAME_3" ColumnName="BBL_BU_NAME_3" />
+                <ScalarProperty Name="BBL_BU_NAME_2" ColumnName="BBL_BU_NAME_2" />
+                <ScalarProperty Name="BBL_BU_NAME_1" ColumnName="BBL_BU_NAME_1" />
+                <ScalarProperty Name="BBL_END_VALIDITY_DATE" ColumnName="BBL_END_VALIDITY_DATE" />
+                <ScalarProperty Name="BBL_START_VALIDITY_DATE" ColumnName="BBL_START_VALIDITY_DATE" />
+                <ScalarProperty Name="BBL_BU_CODE" ColumnName="BBL_BU_CODE" />
+                <ScalarProperty Name="BELONGING_LATEST_CODE" ColumnName="BELONGING_LATEST_CODE" />
+                <ScalarProperty Name="BELONGING_LATEST_START_DATE" ColumnName="BELONGING_LATEST_START_DATE" />
+                <ScalarProperty Name="STAFF_DIVISION_NAME" ColumnName="STAFF_DIVISION_NAME" />
+                <ScalarProperty Name="STAFF_DIVISION_CODE" ColumnName="STAFF_DIVISION_CODE" />
+                <ScalarProperty Name="MEN_OR_WOMEN" ColumnName="MEN_OR_WOMEN" />
+                <ScalarProperty Name="KANA_ORIGINAL_NAME" ColumnName="KANA_ORIGINAL_NAME" />
+                <ScalarProperty Name="ROMAN_ORIGINAL_NAME" ColumnName="ROMAN_ORIGINAL_NAME" />
+                <ScalarProperty Name="KANJI_ORIGINAL_NAME" ColumnName="KANJI_ORIGINAL_NAME" />
+                <ScalarProperty Name="ORIGINAL_NAME_FLAG" ColumnName="ORIGINAL_NAME_FLAG" />
+                <ScalarProperty Name="KANA_NAME" ColumnName="KANA_NAME" />
+                <ScalarProperty Name="ROMAN_NAME" ColumnName="ROMAN_NAME" />
+                <ScalarProperty Name="KANJI_NAME" ColumnName="KANJI_NAME" />
+                <ScalarProperty Name="STAFF_CODE" ColumnName="STAFF_CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_PERSON_OF_OTHER_COMPANY">
+            <EntityTypeMapping TypeName="JINJIModel.V_PERSON_OF_OTHER_COMPANY">
+              <MappingFragment StoreEntitySet="V_PERSON_OF_OTHER_COMPANY">
+                <ScalarProperty Name="CARD_STATUS" ColumnName="CARD_STATUS" />
+                <ScalarProperty Name="BELONGING_COMPANY_NAME" ColumnName="BELONGING_COMPANY_NAME" />
+                <ScalarProperty Name="BELONGING_COMPANY_CODE" ColumnName="BELONGING_COMPANY_CODE" />
+                <ScalarProperty Name="ORIGINAL_CONTRACTOR_NAME" ColumnName="ORIGINAL_CONTRACTOR_NAME" />
+                <ScalarProperty Name="ORIGINAL_CONTRACTOR_CODE" ColumnName="ORIGINAL_CONTRACTOR_CODE" />
+                <ScalarProperty Name="KBL_NEW_BELONGING_LIMIT_FLAG" ColumnName="KBL_NEW_BELONGING_LIMIT_FLAG" />
+                <ScalarProperty Name="KBL_KAKARI_DIVISION_CODE" ColumnName="KBL_KAKARI_DIVISION_CODE" />
+                <ScalarProperty Name="KBL_KAKARI_NUMBER" ColumnName="KBL_KAKARI_NUMBER" />
+                <ScalarProperty Name="KBL_KAKARI_LOCATION_CODE" ColumnName="KBL_KAKARI_LOCATION_CODE" />
+                <ScalarProperty Name="KBL_KAKARI_INFORMAL_NAME" ColumnName="KBL_KAKARI_INFORMAL_NAME" />
+                <ScalarProperty Name="KBL_KAKARI_NAME" ColumnName="KBL_KAKARI_NAME" />
+                <ScalarProperty Name="KBL_SHITSU_INFORMAL_NAME" ColumnName="KBL_SHITSU_INFORMAL_NAME" />
+                <ScalarProperty Name="KBL_SHITSU_NAME" ColumnName="KBL_SHITSU_NAME" />
+                <ScalarProperty Name="KBL_BU_INFORMAL_NAME" ColumnName="KBL_BU_INFORMAL_NAME" />
+                <ScalarProperty Name="KBL_BU_NAME_2" ColumnName="KBL_BU_NAME_2" />
+                <ScalarProperty Name="KBL_BU_NAME_1" ColumnName="KBL_BU_NAME_1" />
+                <ScalarProperty Name="KBL_SHITSU_CODE" ColumnName="KBL_SHITSU_CODE" />
+                <ScalarProperty Name="KBL_BU_CODE" ColumnName="KBL_BU_CODE" />
+                <ScalarProperty Name="KBL_END_VALIDITY_DATE" ColumnName="KBL_END_VALIDITY_DATE" />
+                <ScalarProperty Name="KBL_START_VALIDITY_DATE" ColumnName="KBL_START_VALIDITY_DATE" />
+                <ScalarProperty Name="KBL_KAKARI_CODE" ColumnName="KBL_KAKARI_CODE" />
+                <ScalarProperty Name="SBL_ENGLISH_NAME" ColumnName="SBL_ENGLISH_NAME" />
+                <ScalarProperty Name="SBL_NEW_BELONGING_LIMIT_FLAG" ColumnName="SBL_NEW_BELONGING_LIMIT_FLAG" />
+                <ScalarProperty Name="SBL_SHITSU_KA_DIVISION_CODE" ColumnName="SBL_SHITSU_KA_DIVISION_CODE" />
+                <ScalarProperty Name="SBL_SHITSU_KA_NUMBER" ColumnName="SBL_SHITSU_KA_NUMBER" />
+                <ScalarProperty Name="SBL_SHITSU_LOCATION_CODE" ColumnName="SBL_SHITSU_LOCATION_CODE" />
+                <ScalarProperty Name="SBL_SHITSU_CHANGE_MARK" ColumnName="SBL_SHITSU_CHANGE_MARK" />
+                <ScalarProperty Name="SBL_SHITSU_INFORMAL_NAME" ColumnName="SBL_SHITSU_INFORMAL_NAME" />
+                <ScalarProperty Name="SBL_SHITSU_NAME" ColumnName="SBL_SHITSU_NAME" />
+                <ScalarProperty Name="SBL_BU_INFORMAL_NAME" ColumnName="SBL_BU_INFORMAL_NAME" />
+                <ScalarProperty Name="SBL_BU_NAME_2" ColumnName="SBL_BU_NAME_2" />
+                <ScalarProperty Name="SBL_BU_NAME_1" ColumnName="SBL_BU_NAME_1" />
+                <ScalarProperty Name="SBL_BU_CODE" ColumnName="SBL_BU_CODE" />
+                <ScalarProperty Name="SBL_END_VALIDITY_DATE" ColumnName="SBL_END_VALIDITY_DATE" />
+                <ScalarProperty Name="SBL_START_VALIDITY_DATE" ColumnName="SBL_START_VALIDITY_DATE" />
+                <ScalarProperty Name="SBL_SHITSU_CODE" ColumnName="SBL_SHITSU_CODE" />
+                <ScalarProperty Name="BBL_ENGLISH_NAME" ColumnName="BBL_ENGLISH_NAME" />
+                <ScalarProperty Name="BBL_PERSONNEL_COMPULSION" ColumnName="BBL_PERSONNEL_COMPULSION" />
+                <ScalarProperty Name="BBL_PERSONNEL_EXCEPTION" ColumnName="BBL_PERSONNEL_EXCEPTION" />
+                <ScalarProperty Name="BBL_NEW_BELONGING_LIMIT_FLAG" ColumnName="BBL_NEW_BELONGING_LIMIT_FLAG" />
+                <ScalarProperty Name="BBL_EMPLOY_OFFICE_CODE" ColumnName="BBL_EMPLOY_OFFICE_CODE" />
+                <ScalarProperty Name="BBL_TRAINING_CODE" ColumnName="BBL_TRAINING_CODE" />
+                <ScalarProperty Name="BBL_CHANGE_CODE" ColumnName="BBL_CHANGE_CODE" />
+                <ScalarProperty Name="BBL_RANK_RISE_CODE" ColumnName="BBL_RANK_RISE_CODE" />
+                <ScalarProperty Name="BBL_ASSESSMENT_CODE" ColumnName="BBL_ASSESSMENT_CODE" />
+                <ScalarProperty Name="BBL_ADJUST_SECTION_NUMBER_D" ColumnName="BBL_ADJUST_SECTION_NUMBER_D" />
+                <ScalarProperty Name="BBL_ADJUST_SECTION_NUMBER_C" ColumnName="BBL_ADJUST_SECTION_NUMBER_C" />
+                <ScalarProperty Name="BBL_ADJUST_SECTION_NUMBER_B" ColumnName="BBL_ADJUST_SECTION_NUMBER_B" />
+                <ScalarProperty Name="BBL_ADJUST_SECTION_NUMBER_A" ColumnName="BBL_ADJUST_SECTION_NUMBER_A" />
+                <ScalarProperty Name="BBL_SHITSU_PERSON_SECTION" ColumnName="BBL_SHITSU_PERSON_SECTION" />
+                <ScalarProperty Name="BBL_EXECUTIVE_NUMBER" ColumnName="BBL_EXECUTIVE_NUMBER" />
+                <ScalarProperty Name="BBL_BU_NUMBER" ColumnName="BBL_BU_NUMBER" />
+                <ScalarProperty Name="BBL_BU_LOCATION_CODE" ColumnName="BBL_BU_LOCATION_CODE" />
+                <ScalarProperty Name="BBL_SECTION_CODE" ColumnName="BBL_SECTION_CODE" />
+                <ScalarProperty Name="BBL_BU_ALTERATION_MARK" ColumnName="BBL_BU_ALTERATION_MARK" />
+                <ScalarProperty Name="BBL_BU_INFORMAL_NAME" ColumnName="BBL_BU_INFORMAL_NAME" />
+                <ScalarProperty Name="BBL_BU_NAME_3" ColumnName="BBL_BU_NAME_3" />
+                <ScalarProperty Name="BBL_BU_NAME_2" ColumnName="BBL_BU_NAME_2" />
+                <ScalarProperty Name="BBL_BU_NAME_1" ColumnName="BBL_BU_NAME_1" />
+                <ScalarProperty Name="BBL_END_VALIDITY_DATE" ColumnName="BBL_END_VALIDITY_DATE" />
+                <ScalarProperty Name="BBL_START_VALIDITY_DATE" ColumnName="BBL_START_VALIDITY_DATE" />
+                <ScalarProperty Name="BBL_BU_CODE" ColumnName="BBL_BU_CODE" />
+                <ScalarProperty Name="BELONGING_LATEST_CODE" ColumnName="BELONGING_LATEST_CODE" />
+                <ScalarProperty Name="WORKING_PLACE_CODE" ColumnName="WORKING_PLACE_CODE" />
+                <ScalarProperty Name="END_CONTRACT_TERM" ColumnName="END_CONTRACT_TERM" />
+                <ScalarProperty Name="START_CONTRACT_TERM" ColumnName="START_CONTRACT_TERM" />
+                <ScalarProperty Name="KAB_NEW_BELONGING_LIMIT_FLAG" ColumnName="KAB_NEW_BELONGING_LIMIT_FLAG" />
+                <ScalarProperty Name="KAB_KAKARI_DIVISION_CODE" ColumnName="KAB_KAKARI_DIVISION_CODE" />
+                <ScalarProperty Name="KAB_KAKARI_NUMBER" ColumnName="KAB_KAKARI_NUMBER" />
+                <ScalarProperty Name="KAB_KAKARI_LOCATION_CODE" ColumnName="KAB_KAKARI_LOCATION_CODE" />
+                <ScalarProperty Name="KAB_KAKARI_INFORMAL_NAME" ColumnName="KAB_KAKARI_INFORMAL_NAME" />
+                <ScalarProperty Name="KAB_KAKARI_NAME" ColumnName="KAB_KAKARI_NAME" />
+                <ScalarProperty Name="KAB_SHITSU_INFORMAL_NAME" ColumnName="KAB_SHITSU_INFORMAL_NAME" />
+                <ScalarProperty Name="KAB_SHITSU_NAME" ColumnName="KAB_SHITSU_NAME" />
+                <ScalarProperty Name="KAB_BU_INFORMAL_NAME" ColumnName="KAB_BU_INFORMAL_NAME" />
+                <ScalarProperty Name="KAB_BU_NAME_2" ColumnName="KAB_BU_NAME_2" />
+                <ScalarProperty Name="KAB_BU_NAME_1" ColumnName="KAB_BU_NAME_1" />
+                <ScalarProperty Name="KAB_SHITSU_CODE" ColumnName="KAB_SHITSU_CODE" />
+                <ScalarProperty Name="KAB_BU_CODE" ColumnName="KAB_BU_CODE" />
+                <ScalarProperty Name="KAB_END_VALIDITY_DATE" ColumnName="KAB_END_VALIDITY_DATE" />
+                <ScalarProperty Name="KAB_START_VALIDITY_DATE" ColumnName="KAB_START_VALIDITY_DATE" />
+                <ScalarProperty Name="KAB_KAKARI_CODE" ColumnName="KAB_KAKARI_CODE" />
+                <ScalarProperty Name="SAB_ENGLISH_NAME" ColumnName="SAB_ENGLISH_NAME" />
+                <ScalarProperty Name="SAB_NEW_BELONGING_LIMIT_FLAG" ColumnName="SAB_NEW_BELONGING_LIMIT_FLAG" />
+                <ScalarProperty Name="SAB_SHITSU_KA_DIVISION_CODE" ColumnName="SAB_SHITSU_KA_DIVISION_CODE" />
+                <ScalarProperty Name="SAB_SHITSU_KA_NUMBER" ColumnName="SAB_SHITSU_KA_NUMBER" />
+                <ScalarProperty Name="SAB_SHITSU_LOCATION_CODE" ColumnName="SAB_SHITSU_LOCATION_CODE" />
+                <ScalarProperty Name="SAB_SHITSU_CHANGE_MARK" ColumnName="SAB_SHITSU_CHANGE_MARK" />
+                <ScalarProperty Name="SAB_SHITSU_INFORMAL_NAME" ColumnName="SAB_SHITSU_INFORMAL_NAME" />
+                <ScalarProperty Name="SAB_SHITSU_NAME" ColumnName="SAB_SHITSU_NAME" />
+                <ScalarProperty Name="SAB_BU_INFORMAL_NAME" ColumnName="SAB_BU_INFORMAL_NAME" />
+                <ScalarProperty Name="SAB_BU_NAME_2" ColumnName="SAB_BU_NAME_2" />
+                <ScalarProperty Name="SAB_BU_NAME_1" ColumnName="SAB_BU_NAME_1" />
+                <ScalarProperty Name="SAB_BU_CODE" ColumnName="SAB_BU_CODE" />
+                <ScalarProperty Name="SAB_END_VALIDITY_DATE" ColumnName="SAB_END_VALIDITY_DATE" />
+                <ScalarProperty Name="SAB_START_VALIDITY_DATE" ColumnName="SAB_START_VALIDITY_DATE" />
+                <ScalarProperty Name="SAB_SHITSU_CODE" ColumnName="SAB_SHITSU_CODE" />
+                <ScalarProperty Name="BAB_ENGLISH_NAME" ColumnName="BAB_ENGLISH_NAME" />
+                <ScalarProperty Name="BAB_PERSONNEL_COMPULSION" ColumnName="BAB_PERSONNEL_COMPULSION" />
+                <ScalarProperty Name="BAB_PERSONNEL_EXCEPTION" ColumnName="BAB_PERSONNEL_EXCEPTION" />
+                <ScalarProperty Name="BAB_NEW_BELONGING_LIMIT_FLAG" ColumnName="BAB_NEW_BELONGING_LIMIT_FLAG" />
+                <ScalarProperty Name="BAB_EMPLOY_OFFICE_CODE" ColumnName="BAB_EMPLOY_OFFICE_CODE" />
+                <ScalarProperty Name="BAB_TRAINING_CODE" ColumnName="BAB_TRAINING_CODE" />
+                <ScalarProperty Name="BAB_CHANGE_CODE" ColumnName="BAB_CHANGE_CODE" />
+                <ScalarProperty Name="BAB_RANK_RISE_CODE" ColumnName="BAB_RANK_RISE_CODE" />
+                <ScalarProperty Name="BAB_ASSESSMENT_CODE" ColumnName="BAB_ASSESSMENT_CODE" />
+                <ScalarProperty Name="BAB_ADJUST_SECTION_NUMBER_D" ColumnName="BAB_ADJUST_SECTION_NUMBER_D" />
+                <ScalarProperty Name="BAB_ADJUST_SECTION_NUMBER_C" ColumnName="BAB_ADJUST_SECTION_NUMBER_C" />
+                <ScalarProperty Name="BAB_ADJUST_SECTION_NUMBER_B" ColumnName="BAB_ADJUST_SECTION_NUMBER_B" />
+                <ScalarProperty Name="BAB_ADJUST_SECTION_NUMBER_A" ColumnName="BAB_ADJUST_SECTION_NUMBER_A" />
+                <ScalarProperty Name="BAB_SHITSU_PERSON_SECTION" ColumnName="BAB_SHITSU_PERSON_SECTION" />
+                <ScalarProperty Name="BAB_EXECUTIVE_NUMBER" ColumnName="BAB_EXECUTIVE_NUMBER" />
+                <ScalarProperty Name="BAB_BU_NUMBER" ColumnName="BAB_BU_NUMBER" />
+                <ScalarProperty Name="BAB_BU_LOCATION_CODE" ColumnName="BAB_BU_LOCATION_CODE" />
+                <ScalarProperty Name="BAB_SECTION_CODE" ColumnName="BAB_SECTION_CODE" />
+                <ScalarProperty Name="BAB_BU_ALTERATION_MARK" ColumnName="BAB_BU_ALTERATION_MARK" />
+                <ScalarProperty Name="BAB_BU_INFORMAL_NAME" ColumnName="BAB_BU_INFORMAL_NAME" />
+                <ScalarProperty Name="BAB_BU_NAME_3" ColumnName="BAB_BU_NAME_3" />
+                <ScalarProperty Name="BAB_BU_NAME_2" ColumnName="BAB_BU_NAME_2" />
+                <ScalarProperty Name="BAB_BU_NAME_1" ColumnName="BAB_BU_NAME_1" />
+                <ScalarProperty Name="BAB_END_VALIDITY_DATE" ColumnName="BAB_END_VALIDITY_DATE" />
+                <ScalarProperty Name="BAB_START_VALIDITY_DATE" ColumnName="BAB_START_VALIDITY_DATE" />
+                <ScalarProperty Name="BAB_BU_CODE" ColumnName="BAB_BU_CODE" />
+                <ScalarProperty Name="ACCEPTANCE_BELONGING_CODE" ColumnName="ACCEPTANCE_BELONGING_CODE" />
+                <ScalarProperty Name="STAFF_DIVISION_CODE" ColumnName="STAFF_DIVISION_CODE" />
+                <ScalarProperty Name="KANA_NAME" ColumnName="KANA_NAME" />
+                <ScalarProperty Name="ROMAN_NAME" ColumnName="ROMAN_NAME" />
+                <ScalarProperty Name="KANJI_NAME" ColumnName="KANJI_NAME" />
+                <ScalarProperty Name="STAFF_CODE" ColumnName="STAFF_CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="なし" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
